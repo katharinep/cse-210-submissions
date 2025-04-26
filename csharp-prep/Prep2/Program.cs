@@ -13,29 +13,49 @@ class Program
         //Console.WriteLine(grade);//
 
         //grade conditionals//
+        string letter = "";
+
         if (grade >= 90)
         {
-            Console.WriteLine("Your grade is an A.");
+            letter = "an A";
         }
         else if (grade < 90 && grade >= 80)
         {
-            Console.WriteLine("Your grade is a B.");
+            letter = "a B";
 
         }
         else if (grade < 80 && grade >= 70)
         {
-            Console.WriteLine("Your grade is a C.");
+            letter = "a C.";
 
         }
         else if (grade < 70 && grade >= 60)
         {
-            Console.WriteLine("Your grade is a D.");
-
+            letter = "a D";
         }
         else
         {
-            Console.WriteLine("Your grade is an F.");
+            letter = "an F";
         }
+
+        //+ and - conditionals//
+        int lastDigit = grade % 10;
+        string plusMinus = "";
+
+        if (lastDigit >= 7)
+        {
+            plusMinus = "+";
+        }
+        else if (lastDigit < 3)
+        {
+            plusMinus = "-";
+        }
+
+        //conditionals for As and Fs//
+        
+        
+        //grade statement//
+        Console.WriteLine($"Your grade is {letter}{plusMinus}.");
 
         //pass conditionals//
         if (grade >= 70)
@@ -46,5 +66,7 @@ class Program
         {
             Console.WriteLine("You failed the class. :(");
         }
+
+        //Source of how to get the last digit of a number: https://stackoverflow.com/questions/15731716/how-to-get-the-last-digit-of-a-number//
     }
 }
