@@ -52,7 +52,15 @@ class Program
         }
 
         //conditionals for As and Fs//
-        
+        if (letter == "an A" && plusMinus == "+")
+        {
+            plusMinus = "";
+        }
+
+        if (letter == "an F")
+        {
+            plusMinus = "";
+        }
         
         //grade statement//
         Console.WriteLine($"Your grade is {letter}{plusMinus}.");
