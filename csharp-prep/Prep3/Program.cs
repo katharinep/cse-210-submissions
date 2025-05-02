@@ -5,9 +5,11 @@ class Program
     static void Main(string[] args)
     {
         //Console.WriteLine("Hello Prep3 World!");//
+        
         bool playAgain = true;
         bool game = true;
         int count = 0;
+        
         //ask for magic number//
         //Console.WriteLine("What is the magic number?");
         //string userInput = Console.ReadLine();
@@ -53,21 +55,22 @@ class Program
                     }
                 }
             }
-        }     
-        //Ask to play again//
-        Console.WriteLine("Would you like to play again? (yes/no)");
-        string playResponse = Console.ReadLine();
-        if (playResponse == "yes")
-        {
-            playAgain = true;
-        }
-        else if (playResponse == "no")
-        {
-            playAgain = false;
-        }
-        else
-        {
-            Console.WriteLine("Please enter a valid response.");
+             
+            //Ask to play again//
+            Console.WriteLine("Would you like to play again? (yes/no)");
+            string playResponse = Console.ReadLine();
+            if (playResponse == "yes")
+            {
+                playAgain = true;
+            }
+            else if (playResponse == "no")
+            {
+                playAgain = false;
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid response.");
+            }
         }
     }
 }
