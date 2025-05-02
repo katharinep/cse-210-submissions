@@ -8,27 +8,26 @@ class Program
 
         bool game = true;
         //ask for magic number//
-        Console.WriteLine("What is the magic number?");
-        string userInput = Console.ReadLine();
-        int magicNumber = int.Parse(userInput);
+        //Console.WriteLine("What is the magic number?");
+        //string userInput = Console.ReadLine();
+        //int magicNumber = int.Parse(userInput);
         //Console.WriteLine(magicNumber);//
+
+        //random number//
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 101);
 
         //while loop for guesses//
         while (game == true)
         {
             //Guess the number//
-            Console.WriteLine("What is your guess?");
+            Console.WriteLine("What is your guess? (1-100)");
             string userGuess = Console.ReadLine();
             int guess = int.Parse(userGuess);
             //Console.WriteLine(guess);//
 
             //if statement comparing numbers//
-            if (guess == magicNumber)
-            {
-                Console.WriteLine("You guessed it!");
-                game = false;
-            }
-            else if (guess > magicNumber)
+            if (guess > magicNumber)
             {
                 Console.WriteLine("Lower");
             }
@@ -38,7 +37,8 @@ class Program
             }
             else
             {
-                Console.WriteLine("Please enter a valid number.");
+                Console.WriteLine("You guessed it!");
+                game = false;
             }
         }
     }
