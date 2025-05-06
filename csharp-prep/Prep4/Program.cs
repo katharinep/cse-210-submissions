@@ -14,7 +14,7 @@ class Program
         while (notZero == true)
         {
             //Ask for list of numbers.
-            Console.WriteLine("Enter number for the list. Enter 0 when done.");
+            Console.WriteLine("Enter a list of numbers, type 0 when finished.");
             string userInput = Console.ReadLine();
             int number = int.Parse(userInput);
             //Console.WriteLine("You entered " + number);//
@@ -30,7 +30,10 @@ class Program
                 notZero = false;
             }
         }
-        Console.WriteLine("Loop ended.");
+        //Console.WriteLine("Loop ended.");//
+
+        int sum = numbers.Sum();
+        Console.WriteLine("The sum is: " + sum);
         
     }
 }
