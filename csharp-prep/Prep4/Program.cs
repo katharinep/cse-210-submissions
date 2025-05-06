@@ -19,15 +19,15 @@ class Program
             int number = int.Parse(userInput);
             //Console.WriteLine("You entered " + number);//
 
+            if (number == 0)
+            {
+                notZero = false;
+            }
+
             numbers.Add(number);
             foreach (int item in numbers)
             {
                 Console.WriteLine(item);
-            }
-
-            if (number == 0)
-            {
-                notZero = false;
             }
         }
         //Console.WriteLine("Loop ended.");//
@@ -35,5 +35,7 @@ class Program
         int sum = numbers.Sum();
         Console.WriteLine("The sum is: " + sum);
         
+        double average = sum / numbers.Count;
+        Console.WriteLine("The average is: " + average);
     }
 }
