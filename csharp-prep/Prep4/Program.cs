@@ -33,6 +33,7 @@ class Program
         //Console.WriteLine("Loop ended.");//
 
         numbers.Remove(0);
+        
         int sum = numbers.Sum();
         Console.WriteLine("The sum is: " + sum);
         
@@ -41,5 +42,6 @@ class Program
 
         int largest = numbers.Max();
         Console.WriteLine("The largest number is: " + largest);
+
     }
 }
