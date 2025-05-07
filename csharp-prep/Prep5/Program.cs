@@ -6,6 +6,12 @@ class Program
     {
         //Console.WriteLine("Hello Prep5 World!");//
 
+        DisplayWelcome();
+        PromptUserName();
+        PromptUserNumber();
+        //SquareNumber(favNum);//
+        //DisplayResult(userName, favNum);//
+
         static void DisplayWelcome()
         {
             Console.WriteLine("Welocome to the Program!");
@@ -32,5 +38,9 @@ class Program
             return squareNum;
         }
         
+        static void DisplayResult(string userName, int squareNum)
+        {
+            Console.WriteLine($"{userName}, the square of your number is {squareNum}");
+        }
     }
 }
