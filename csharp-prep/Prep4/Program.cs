@@ -32,6 +32,7 @@ class Program
         }
         //Console.WriteLine("Loop ended.");//
 
+        numbers.Remove(0);
         int sum = numbers.Sum();
         Console.WriteLine("The sum is: " + sum);
         
