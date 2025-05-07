@@ -17,5 +17,20 @@ class Program
             string userName = Console.ReadLine();
             return userName;
         }
+
+        static int PromptUserNumber()
+        {
+            Console.WriteLine("What is your favorite number?");
+            string userInput = Console.ReadLine();
+            int favNum = int.Parse(userInput);
+            return favNum;
+        }
+
+        static int SquareNumber(int favNum)
+        {
+            int squareNum = favNum * favNum;
+            return squareNum;
+        }
+        
     }
 }
