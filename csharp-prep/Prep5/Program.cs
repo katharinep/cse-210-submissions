@@ -12,8 +12,8 @@ class Program
 
         int favNum = PromptUserNumber();
         int squareNum = SquareNumber(favNum);
-        Console.WriteLine(favNum);
-        //DisplayResult(userName, favNum);//
+        //Console.WriteLine(favNum);//
+        DisplayResult(userName, squareNum);
 
         static void DisplayWelcome()
         {
