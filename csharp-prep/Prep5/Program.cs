@@ -7,9 +7,12 @@ class Program
         //Console.WriteLine("Hello Prep5 World!");//
 
         DisplayWelcome();
-        PromptUserName();
-        PromptUserNumber();
-        //SquareNumber(favNum);//
+
+        string userName = PromptUserName();
+
+        int favNum = PromptUserNumber();
+        int squareNum = SquareNumber(favNum);
+        Console.WriteLine(favNum);
         //DisplayResult(userName, favNum);//
 
         static void DisplayWelcome()
