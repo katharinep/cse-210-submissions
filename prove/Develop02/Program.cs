@@ -51,7 +51,10 @@ class Program
             }
             else
             {
+                Console.WriteLine("");
                 Console.WriteLine("Please choose a valid number.");
+                Console.WriteLine("");
+
                 quit = false;
             }
 
