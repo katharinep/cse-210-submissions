@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -19,14 +20,15 @@ class Program
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
-            Console.WriteLine("> ");
+            Console.Write("> ");
 
             string userInput = Console.ReadLine();
             int userChoice = int.Parse(userInput);
 
-            //Menu Conditionals//
+            //Error handling//
             if (userChoice >= 1 & userChoice <= 5)
             {
+                //Menu conditionals//
                 if (userChoice == 1)
                 {
 
@@ -61,4 +63,5 @@ class Program
         }
 
     }
+
 }

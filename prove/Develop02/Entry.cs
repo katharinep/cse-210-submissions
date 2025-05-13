@@ -13,4 +13,14 @@ public class Entry
     }
 
     //Methods//
+
+    public void DisplayPrompt(string Prompt.randomPrompt)
+    {
+
+    }
+    public string EntryInput(string _entry)
+    {
+        _entry = Console.ReadLine();
+        return _entry;
+    }
 }
