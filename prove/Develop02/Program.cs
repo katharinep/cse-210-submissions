@@ -21,31 +21,39 @@ class Program
             Console.WriteLine("5. Quit");
             Console.WriteLine("> ");
 
-            string userChoice = Console.ReadLine();
+            string userInput = Console.ReadLine();
+            int userChoice = int.Parse(userInput);
+
             //Menu Conditionals//
+            if (userChoice >= 1 & userChoice <= 5)
+            {
+                if (userChoice == 1)
+                {
 
-            if (userChoice == "1")
-            {
-
-            }
-            else if (userChoice == "2")
-            {
+                }
+                else if (userChoice == 2)
+                {
                 
-            }
-            else if (userChoice == "3")
-            {
+                }
+                else if (userChoice == 3)
+                {
                 
-            }
-            else if (userChoice == "4")
-            {
+                }
+                else if (userChoice == 4)
+                {
                 
+                }
+                else
+                {
+                    Console.WriteLine("See you later!");
+                    quit = true;  
+                }
             }
             else
             {
-              Console.WriteLine("See you later!");
-              quit = true;  
+                Console.WriteLine("Please choose a valid number.");
+                quit = false;
             }
-
 
         }
 
