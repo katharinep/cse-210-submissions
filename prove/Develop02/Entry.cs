@@ -14,9 +14,9 @@ public class Entry
 
     //Methods//
 
-    public void DisplayPrompt(string Prompt.randomPrompt)
+    public void DisplayPrompt(string _randomprompt)
     {
-
+        Console.WriteLine(_randomprompt);
     }
     public string EntryInput(string _entry)
     {
