@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+
 class Program
 {
     static void Main(string[] args)
@@ -31,21 +32,23 @@ class Program
                 //Menu conditionals//
                 if (userChoice == 1)
                 {
-                    Entry entry = new Entry();
-                    entry.DisplayPrompt();
-                    entry.EntryInput();
+                    Entry journalentry = new Entry();
+                    string prompt = journalentry.DisplayPrompt();
+                    string entry = journalentry.EntryInput();
+                    string date = journalentry.GenerateDate();
+                    string fullEntry = journalentry.ExportEntry(date, prompt, entry);
                 }
                 else if (userChoice == 2)
                 {
-                    
+                    //display//
                 }
                 else if (userChoice == 3)
                 {
-                
+                    //load//
                 }
                 else if (userChoice == 4)
                 {
-                
+                    //save//
                 }
                 else
                 {

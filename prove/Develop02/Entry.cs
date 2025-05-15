@@ -12,12 +12,13 @@ public class Entry
 
     //Methods//
 
-    public void DisplayPrompt()
+    public string DisplayPrompt()
     {
         Prompt prompts = new Prompt();
 
         string prompt = prompts.GeneratePrompt();
         Console.WriteLine(prompt);
+        return prompt;
     }
     
     public string EntryInput()
@@ -31,5 +32,11 @@ public class Entry
         DateTime currentTime = DateTime.Now;
         string _date = currentTime.ToShortDateString();
         return _date;
+    }
+
+    public string ExportEntry(string date, string prompt, string entry)
+    {
+        string fullEntry = date + "- Prompt: " + prompt + entry;
+        return fullEntry;
     }
 }
