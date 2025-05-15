@@ -28,6 +28,8 @@ public class Entry
 
     public string GenerateDate()
     {
-        
+        DateTime currentTime = DateTime.Now;
+        string _date = currentTime.ToShortDateString();
+        return _date;
     }
 }
