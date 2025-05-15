@@ -1,7 +1,7 @@
 public class Prompt
 {
     public string _randomPrompt;
-    public static List<string> prompts = new List<string>
+    public static List<string> _prompts = new List<string>
     {
         "Who was the most interesting person I interacted with today?",
         "What was the best part of my day?",
@@ -11,17 +11,17 @@ public class Prompt
     };
 
     //Constructor//
-    public Prompt(string randomprompt)
+    public Prompt()
     {
-        _randomPrompt = randomprompt;
+       
     }
 
     //Methods//
-    public string GeneratePrompt(List<string> prompts)
+    public string GeneratePrompt()
     {
         Random random = new Random();
         int randomindex = random.Next(1, 5);
-        _randomPrompt = prompts[randomindex];
+        _randomPrompt = _prompts[randomindex];
         return _randomPrompt;
     }
 }

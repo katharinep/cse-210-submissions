@@ -31,11 +31,13 @@ class Program
                 //Menu conditionals//
                 if (userChoice == 1)
                 {
-
+                    Entry entry = new Entry();
+                    entry.DisplayPrompt();
+                    entry.EntryInput();
                 }
                 else if (userChoice == 2)
                 {
-                
+                    
                 }
                 else if (userChoice == 3)
                 {

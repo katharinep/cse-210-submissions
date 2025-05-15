@@ -5,22 +5,29 @@ public class Entry
     public string _date;
 
     //constructor//
-    public Entry(string entry, string prompt, string date)
+    public Entry()
     {
-        _entry = entry;
-        _prompt = prompt;
-        _date = date;
+        
     }
 
     //Methods//
 
-    public void DisplayPrompt(string _randomprompt)
+    public void DisplayPrompt()
     {
-        Console.WriteLine(_randomprompt);
+        Prompt prompts = new Prompt();
+
+        string prompt = prompts.GeneratePrompt();
+        Console.WriteLine(prompt);
     }
-    public string EntryInput(string _entry)
+    
+    public string EntryInput()
     {
         _entry = Console.ReadLine();
         return _entry;
+    }
+
+    public string GenerateDate()
+    {
+        
     }
 }
