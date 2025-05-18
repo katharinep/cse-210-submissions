@@ -19,6 +19,7 @@ public class Load
 
     public string ReadFile(string _fileName)
     {
+        string fullEntry = "";
         string[] lines = System.IO.File.ReadAllLines(_fileName);
 
         foreach (string line in lines)
@@ -29,8 +30,8 @@ public class Load
             string prompt = parts[1];
             string entry = parts[2];
 
-            string fullEntry = date + "- Prompt: " + prompt + entry;
-            return fullEntry;
+            fullEntry = date + "- Prompt: " + prompt + entry;
         }
+        return fullEntry;
     }
 }
