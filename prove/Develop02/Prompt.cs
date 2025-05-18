@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 public class Prompt
 {
     public string _randomPrompt;
@@ -13,7 +15,7 @@ public class Prompt
     //Constructor//
     public Prompt()
     {
-       
+
     }
 
     //Methods//

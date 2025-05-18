@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-
 class Program
 {
     static void Main(string[] args)
@@ -23,41 +22,42 @@ class Program
             Console.WriteLine("5. Quit");
             Console.Write("> ");
 
-            string userInput = Console.ReadLine();
-            int userChoice = int.Parse(userInput);
+            string userinput = Console.ReadLine();
+            int userchoice = int.Parse(userinput);
 
             //Error handling//
-            if (userChoice >= 1 & userChoice <= 5)
+            if (userchoice >= 1 & userchoice <= 5)
             {
-                string fullEntry = "";
+                string fullentry = "";
                 //Menu conditionals//
-                if (userChoice == 1)
+                if (userchoice == 1)
                 {
                     Entry journalentry = new Entry();
                     string prompt = journalentry.DisplayPrompt();
                     string entry = journalentry.EntryInput();
                     string date = journalentry.GenerateDate();
-                    fullEntry = journalentry.ExportEntry(date, prompt, entry);
+                    fullentry = journalentry.ExportEntry(date, prompt, entry);
                 }
-                else if (userChoice == 2)
+                else if (userchoice == 2)
                 {
+                    //display//
 
                 }
-                else if (userChoice == 3)
+                else if (userchoice == 3)
                 {
                     //load//
                     Console.Write("Enter the name of the file to load (.csv): ");
-                    string fileName = Console.ReadLine();
-                    Load loadFile = new Load(fileName);
-                    loadFile.ReadFile(fileName);
+                    string filename = Console.ReadLine();
+                    Load loadfile = new Load(filename);
+                    loadfile.ReadFile(filename);
                 }
-                else if (userChoice == 4)
+                else if (userchoice == 4)
                 {
                     //save//
                     Console.Write("Enter the name of the file to save to (.csv): ");
-                    string fileName = Console.ReadLine();
-                    Save saveFile = new Save(fileName);
-                    saveFile.WriteFile(fullEntry);
+                    string filename = Console.ReadLine();
+                    Save savefile = new Save(filename);
+                    savefile.WriteFile(fullentry);
 
                 }
                 else
