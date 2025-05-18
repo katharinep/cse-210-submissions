@@ -29,6 +29,7 @@ class Program
             //Error handling//
             if (userChoice >= 1 & userChoice <= 5)
             {
+                string fullEntry = "";
                 //Menu conditionals//
                 if (userChoice == 1)
                 {
@@ -36,24 +37,33 @@ class Program
                     string prompt = journalentry.DisplayPrompt();
                     string entry = journalentry.EntryInput();
                     string date = journalentry.GenerateDate();
-                    string fullEntry = journalentry.ExportEntry(date, prompt, entry);
+                    fullEntry = journalentry.ExportEntry(date, prompt, entry);
                 }
                 else if (userChoice == 2)
                 {
-                    //display//
+
                 }
                 else if (userChoice == 3)
                 {
                     //load//
+                    Console.Write("Enter the name of the file to load (.csv): ");
+                    string fileName = Console.ReadLine();
+                    Load loadFile = new Load(fileName);
+                    loadFile.ReadFile(fileName);
                 }
                 else if (userChoice == 4)
                 {
                     //save//
+                    Console.Write("Enter the name of the file to save to (.csv): ");
+                    string fileName = Console.ReadLine();
+                    Save saveFile = new Save(fileName);
+                    saveFile.WriteFile(fullEntry);
+
                 }
                 else
                 {
                     Console.WriteLine("See you later!");
-                    quit = true;  
+                    quit = true;
                 }
             }
             else
