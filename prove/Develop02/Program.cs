@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 class Program
 {
@@ -32,7 +33,7 @@ class Program
             //Error handling//
             if (userchoice >= 1 & userchoice <= 5)
             {
-                string fullentry = "";
+                //string fullentry = "";
                 //Menu conditionals//
                 if (userchoice == 1)
                 {
@@ -41,15 +42,6 @@ class Program
                     journalentry._prompt = journalentry.DisplayPrompt();
                     journalentry._entry = journalentry.EntryInput();
                     journal.AddEntry(journalentry);
-
-                    Console.WriteLine("Entries so far: ");
-                    foreach (Entry x in journal.entries)
-                    {
-                        Console.WriteLine("D: " + x._date);
-                        Console.WriteLine("P: " + x._prompt);
-                        Console.WriteLine("E: " + x._entry);
-                        Console.WriteLine("");
-                    }
                     
                 }
                 else if (userchoice == 2)
@@ -68,12 +60,8 @@ class Program
                 else if (userchoice == 4)
                 {
                     //save//
-                    //The Journal list should be written to the .csv or .txt file)//
-                    Console.Write("Enter the name of the file to save to (.csv): ");
-                    //string filename = Console.ReadLine();//
                     Save savefile = new Save(filename);
-                    savefile.WriteFile(fullentry);
-
+                    savefile.WriteFile(journal.entries);
                 }
                 else
                 {

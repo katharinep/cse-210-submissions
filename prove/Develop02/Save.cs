@@ -12,18 +12,21 @@ public class Save
     }
 
     //Methods//
-    public string SavePrompt()
-    {
-        Console.Write("Enter name of file to save to: ");
-        _fileName = Console.ReadLine();
-        return _fileName;
-    }
 
-    public void WriteFile(string fullEntry)
+    public void WriteFile(List<Entry> entries)
     {
+        Console.WriteLine("Saving to file...");
         using (StreamWriter outputFile = new StreamWriter(_fileName))
         {
-            outputFile.WriteLine(fullEntry);
+            foreach (Entry entry in entries)
+            {
+                //date
+                outputFile.WriteLine(entry._date);
+                //prompt
+                outputFile.WriteLine(entry._prompt);
+                //entry
+                outputFile.WriteLine(entry._entry);
+            }
         }
     }
 }
