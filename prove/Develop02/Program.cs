@@ -37,14 +37,19 @@ class Program
                 if (userchoice == 1)
                 {
                     Entry journalentry = new Entry();
-                    string date = journalentry.GenerateDate();
-                    string prompt = journalentry.DisplayPrompt();
-                    string entry = journalentry.EntryInput();
+                    journalentry._date = journalentry.GenerateDate();
+                    journalentry._prompt = journalentry.DisplayPrompt();
+                    journalentry._entry = journalentry.EntryInput();
                     journal.AddEntry(journalentry);
 
-                    Console.WriteLine("Date: " + date);
-                    Console.WriteLine("Prompt: " + prompt);
-                    Console.WriteLine("Entry: " + entry);
+                    Console.WriteLine("Entries so far: ");
+                    foreach (Entry x in journal.entries)
+                    {
+                        Console.WriteLine("D: " + x._date);
+                        Console.WriteLine("P: " + x._prompt);
+                        Console.WriteLine("E: " + x._entry);
+                        Console.WriteLine("");
+                    }
                     
                 }
                 else if (userchoice == 2)

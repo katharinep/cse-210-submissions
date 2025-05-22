@@ -8,7 +8,7 @@ public class Entry
     //constructor//
     public Entry()
     {
-        
+
     }
 
     public Entry(string prompt, string entry, string date)
@@ -42,9 +42,4 @@ public class Entry
         return _date;
     }
 
-    //full entry to add to entry list//
-    //public string CreateFullEntry(string date, string prompt, string entry)
-    //{
-        //string fullEntry = 
-    //}
 }
