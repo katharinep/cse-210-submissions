@@ -37,11 +37,15 @@ class Program
                 if (userchoice == 1)
                 {
                     Entry journalentry = new Entry();
+                    string date = journalentry.GenerateDate();
                     string prompt = journalentry.DisplayPrompt();
                     string entry = journalentry.EntryInput();
-                    string date = journalentry.GenerateDate();
-                    Entry fullentry = journalentry.ExportEntry(date, prompt, entry);
-                    journal.AddEntry(fullentry);
+                    journal.AddEntry(journalentry);
+
+                    Console.WriteLine("Date: " + date);
+                    Console.WriteLine("Prompt: " + prompt);
+                    Console.WriteLine("Entry: " + entry);
+                    
                 }
                 else if (userchoice == 2)
                 {

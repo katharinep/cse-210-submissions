@@ -11,6 +11,13 @@ public class Entry
         
     }
 
+    public Entry(string prompt, string entry, string date)
+    {
+        _prompt = prompt;
+        _entry = entry;
+        _date = date;
+    }
+
     //Methods//
 
     public string DisplayPrompt()
@@ -21,7 +28,7 @@ public class Entry
         Console.WriteLine(prompt);
         return prompt;
     }
-    
+
     public string EntryInput()
     {
         _entry = Console.ReadLine();
@@ -35,9 +42,9 @@ public class Entry
         return _date;
     }
 
-    public string ExportEntry(string date, string prompt, string entry)
-    {
-        string fullEntry = date + "- Prompt: " + prompt + entry;
-        return fullEntry;
-    }
+    //full entry to add to entry list//
+    //public string CreateFullEntry(string date, string prompt, string entry)
+    //{
+        //string fullEntry = 
+    //}
 }
