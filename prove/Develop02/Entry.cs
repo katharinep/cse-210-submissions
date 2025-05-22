@@ -11,12 +11,12 @@ public class Entry
 
     }
 
-    public Entry(string prompt, string entry, string date)
-    {
-        _prompt = prompt;
-        _entry = entry;
-        _date = date;
-    }
+    //public Entry(string prompt, string entry, string date)
+    //{
+        //_prompt = prompt;
+        //_entry = entry;
+        //_date = date;
+    //}
 
     //Methods//
 
