@@ -8,5 +8,9 @@ public class Journal
     }
 
     //Create Entries//
+    public void AddEntry(Entry fullEntry)
+    {
+        entries.Add(fullEntry);
+    }
 
 }

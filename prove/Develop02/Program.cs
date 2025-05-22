@@ -8,8 +8,12 @@ class Program
         //Console.WriteLine("Hello Develop02 World!");//
 
         Console.WriteLine("Welcome to Journal Keeper");
+        Console.WriteLine("");
 
         bool quit = false;
+        Journal journal = new Journal();
+        Console.Write(" Please enter the filename you will be loading and saving to: ");
+        string filename = Console.ReadLine();
 
         while (quit == false)
         {
@@ -36,7 +40,8 @@ class Program
                     string prompt = journalentry.DisplayPrompt();
                     string entry = journalentry.EntryInput();
                     string date = journalentry.GenerateDate();
-                    fullentry = journalentry.ExportEntry(date, prompt, entry);
+                    Entry fullentry = journalentry.ExportEntry(date, prompt, entry);
+                    journal.AddEntry(fullentry);
                 }
                 else if (userchoice == 2)
                 {
@@ -47,15 +52,16 @@ class Program
                 {
                     //load//
                     Console.Write("Enter the name of the file to load (.csv): ");
-                    string filename = Console.ReadLine();
+                    //string filename = Console.ReadLine();//
                     Load loadfile = new Load(filename);
                     loadfile.ReadFile(filename);
                 }
                 else if (userchoice == 4)
                 {
                     //save//
+                    //The Journal list should be written to the .csv or .txt file)//
                     Console.Write("Enter the name of the file to save to (.csv): ");
-                    string filename = Console.ReadLine();
+                    //string filename = Console.ReadLine();//
                     Save savefile = new Save(filename);
                     savefile.WriteFile(fullentry);
 
