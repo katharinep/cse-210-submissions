@@ -42,7 +42,7 @@ class Program
                     journalentry._prompt = journalentry.DisplayPrompt();
                     journalentry._entry = journalentry.EntryInput();
                     journal.AddEntry(journalentry);
-                    
+
                 }
                 else if (userchoice == 2)
                 {
@@ -52,7 +52,13 @@ class Program
                 else if (userchoice == 3)
                 {
                     //load//
-                    Load.ReadFile(filename);
+                    List<Entry> loadJournal = Load.ReadFile(filename);
+
+                    foreach (Entry e in loadJournal)
+                    {
+                        Console.WriteLine($"{e._date} - Prompt: {e._prompt} {e._entry}");
+                        Console.WriteLine("");
+                    }
                 }
                 else if (userchoice == 4)
                 {
