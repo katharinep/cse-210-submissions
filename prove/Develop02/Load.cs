@@ -21,12 +21,6 @@ public class Load
         foreach (string line in lines)
         {
             string[] parts = line.Split(",");
-
-            //string date = parts[0];
-            //string prompt = parts[1];
-            //string entry = parts[2];
-
-            //fullEntry = date + "- Prompt: " + prompt + entry;
             Console.WriteLine(line);
         }
         return entries;

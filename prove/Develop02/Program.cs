@@ -6,15 +6,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Console.WriteLine("Hello Develop02 World!");//
-
+        
         Console.WriteLine("Welcome to Journal Keeper");
         Console.WriteLine("");
 
         bool quit = false;
         Journal journal = new Journal();
-        Console.Write(" Please enter the filename you will be loading and saving to: ");
+        Console.Write(" Please enter the filename you will be loading and saving to (.csv): ");
         string filename = Console.ReadLine();
+
+        Console.WriteLine($"You chose to save to {filename}");
+        Console.WriteLine("");
 
         while (quit == false)
         {
@@ -33,7 +35,6 @@ class Program
             //Error handling//
             if (userchoice >= 1 & userchoice <= 5)
             {
-                //string fullentry = "";
                 //Menu conditionals//
                 if (userchoice == 1)
                 {
@@ -88,3 +89,4 @@ class Program
 
 }
 //For extra credit I added a little error handling in case the user inputs an option that doesn't exist.//
+//I also added confirmation for the user on which file they will be loading from or saving to. It's simple but should help the user.//
