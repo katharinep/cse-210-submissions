@@ -52,10 +52,7 @@ class Program
                 else if (userchoice == 3)
                 {
                     //load//
-                    Console.Write("Enter the name of the file to load (.csv): ");
-                    //string filename = Console.ReadLine();//
-                    Load loadfile = new Load(filename);
-                    loadfile.ReadFile(filename);
+                    Load.ReadFile(filename);
                 }
                 else if (userchoice == 4)
                 {

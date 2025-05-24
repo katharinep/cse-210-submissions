@@ -1,38 +1,34 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 public class Load
 {
     public string _fileName;
 
     //Constructor//
-    public Load(string filename)
+    public Load()
     {
-        _fileName = filename;
+    
     }
 
     //Methods//
-    public string FilePrompt()
+    
+    public static List<Entry> ReadFile(string filename)
     {
-        Console.Write("Enter file to load: ");
-        _fileName = Console.ReadLine();
-        return _fileName;
-    }
-
-    public string ReadFile(string _fileName)
-    {
-        string fullEntry = "";
-        string[] lines = System.IO.File.ReadAllLines(_fileName);
+        List<Entry> entries = new List<Entry>();
+        string[] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string line in lines)
         {
             string[] parts = line.Split(",");
 
-            string date = parts[0];
-            string prompt = parts[1];
-            string entry = parts[2];
+            //string date = parts[0];
+            //string prompt = parts[1];
+            //string entry = parts[2];
 
-            fullEntry = date + "- Prompt: " + prompt + entry;
+            //fullEntry = date + "- Prompt: " + prompt + entry;
+            Console.WriteLine(line);
         }
-        return fullEntry;
+        return entries;
     }
 }
