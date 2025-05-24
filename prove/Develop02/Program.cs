@@ -47,6 +47,7 @@ class Program
                 else if (userchoice == 2)
                 {
                     //display//
+                    journal.DisplayEntries();
 
                 }
                 else if (userchoice == 3)
@@ -86,3 +87,4 @@ class Program
     }
 
 }
+//For extra credit I added a little error handling in case the user inputs an option that doesn't exist.//
