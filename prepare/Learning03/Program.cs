@@ -25,7 +25,7 @@ class Program
                 string fractionstring = wholeFraction.GetFractionString(top, bottom);
                 Console.WriteLine(fractionstring);
 
-                double decimalValue = wholeFraction.GetDecimalValue(top, bottom);
+                double decimalValue = wholeFraction.GetDecimalValue();
                 Console.WriteLine(decimalValue);
 
             }
@@ -36,7 +36,7 @@ class Program
                 string fractionstring = defaultOne.GetFractionString(top, bottom);
                 Console.WriteLine(fractionstring);
 
-                double decimalValue = defaultOne.GetDecimalValue(top, bottom);
+                double decimalValue = defaultOne.GetDecimalValue();
                 Console.WriteLine(decimalValue);
             }
             else
@@ -48,7 +48,7 @@ class Program
                 string fractionstring = fraction.GetFractionString(top, bottom);
                 Console.WriteLine(fractionstring);
 
-                double decimalValue = fraction.GetDecimalValue(top, bottom);
+                double decimalValue = fraction.GetDecimalValue();
                 Console.WriteLine(decimalValue);
             }
 

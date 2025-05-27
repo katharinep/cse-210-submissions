@@ -52,9 +52,9 @@ public class Fraction
         return fractionString;
     }
 
-    public double GetDecimalValue(int top, int bottom)
+    public double GetDecimalValue()
     {
-        double decimalValue = top / bottom;
+        double decimalValue = (double)_top / (double)_bottom;
         return decimalValue;
     }
 }
