@@ -6,7 +6,8 @@ public class Fraction
     //constructors
     public Fraction()
     {
-
+        _top = 1;
+        _bottom = 1;
     }
 
     public Fraction(int wholeNumber)
@@ -40,5 +41,13 @@ public class Fraction
     public void SetBottom(int bottom)
     {
         _bottom = bottom;
+    }
+
+    //methods
+    public string GetFractionString(int top, int bottom)
+    {
+        string x = top.ToString();
+        string y = bottom.ToString();
+        Console.WriteLine($"{x}/{y}");
     }
 }
