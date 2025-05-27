@@ -48,6 +48,13 @@ public class Fraction
     {
         string x = top.ToString();
         string y = bottom.ToString();
-        Console.WriteLine($"{x}/{y}");
+        string fractionString = x + "/" + y;
+        return fractionString;
+    }
+
+    public double GetDecimalValue(int top, int bottom)
+    {
+        double decimalValue = top / bottom;
+        return decimalValue;
     }
 }
