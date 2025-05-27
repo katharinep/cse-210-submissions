@@ -4,27 +4,33 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Fraction Calculator");
-        Console.Write("Enter the top number: ");
-        string userTop = Console.ReadLine();
-        int top = int.Parse(userTop);
+        bool program = false;
 
-        Console.Write("Enter the bottom number: ");
-        string userBottom = Console.ReadLine();
-        int bottom = int.Parse(userBottom);
+        while (program == false)
+        {
+            Console.WriteLine("Fraction Calculator");
+            Console.Write("Enter the top number: ");
+            string userTop = Console.ReadLine();
+            int top = int.Parse(userTop);
 
-        if (bottom == 1)
-        {
-            Fraction wholeFraction = new Fraction(top);
+            Console.Write("Enter the bottom number: ");
+            string userBottom = Console.ReadLine();
+            int bottom = int.Parse(userBottom);
 
-        }
-        else if (bottom == 1 & top == 1)
-        {
-            Fraction defaultOne = new Fraction();
-        }
-        else
-        {
-            Fraction fraction = new Fraction(top, bottom);
+            if (bottom == 1)
+            {
+                Fraction wholeFraction = new Fraction(top);
+
+            }
+            else if (bottom == 1 & top == 1)
+            {
+                Fraction defaultOne = new Fraction();
+            }
+            else
+            {
+                Fraction fraction = new Fraction(top, bottom);
+            }
+
         }
     }
 }
