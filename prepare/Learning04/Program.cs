@@ -6,9 +6,7 @@ class Program
     {
         //Console.WriteLine("Hello Learning04 World!");//
 
-        Assignment assignment1 = new Assignment();
-        assignment1.SetStudentName("Bob");
-        assignment1.SetTopic("Fractions");
+        Assignment assignment1 = new Assignment("Bob", "Fractions");
 
         Console.WriteLine(assignment1.GetSummary());
     }
