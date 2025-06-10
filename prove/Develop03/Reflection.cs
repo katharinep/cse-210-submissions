@@ -13,4 +13,20 @@ public class Reflection
     //getters and setters
 
     //Methods
+    public string GetRandomPrompt()
+    {
+        //write prompt generation
+        return "";
+    }
+
+    public string GetRandomQ()
+    {
+        //write question generation
+        return "";
+    }
+
+    public void RunReflection(int duration)
+    {
+        //run activity here
+    }
 }
