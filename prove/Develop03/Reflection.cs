@@ -2,8 +2,8 @@ public class Reflection
 {
     private string _randomPrompt;
     private string _randomQ;
-    private List<string> Prompt = new Prompt;
-    private List<string> Question = new Question;
+    private List<string> Prompt = new List<string>();
+    private List<string> Question = new List<string>();
 
     public Reflection()
     {
