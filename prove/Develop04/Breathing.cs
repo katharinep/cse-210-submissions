@@ -1,8 +1,8 @@
 public class Breathing : Activity
 {
-    public Breathing(int _duration) : base()
+    public Breathing() : base()
     {
-
+        GetDuration();
     }
 
     //Getters and Setters
@@ -11,19 +11,40 @@ public class Breathing : Activity
 
     public void RunBreathing(int duration)
     {
-
+        ClearScreen();
+        Console.WriteLine("Get ready...");
+        Spinner();
+        Console.WriteLine("");
+        Console.WriteLine("");
+        BreathingMessage(duration);
+        Thread.Sleep(3000);
+        EndingMessage();
+        ClearScreen();
     }
 
     public void BreathingMessage(int duration)
     {
         // breathe in breath out
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(duration);
+
+        while (startTime < endTime)
+        {
+            Console.Write("Breathe in...");
+            Countdown();
+            Console.WriteLine("");
+            Console.Write("Now breathe out...");
+            Countdown();
+            Console.WriteLine("");
+        }
+
     }
 
     public void Countdown()
     {
         for (int i = 5; i > 0; i--)
         {
-            Console.Write("i");
+            Console.Write(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
