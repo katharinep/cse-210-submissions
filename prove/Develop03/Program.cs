@@ -6,6 +6,8 @@ class Program
     {
         //Console.WriteLine("Hello Develop03 World!");
         Console.WriteLine("Welcome to my Mindfullness Program");
+
+        
     }
 
     public void DisplayMenu()
@@ -17,7 +19,5 @@ class Program
         Console.WriteLine("3. Start listing activity");
         Console.WriteLine("4. Quit");
         Console.Write("Select a choice from the menu: ");
-
-
     }
 }
