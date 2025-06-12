@@ -24,17 +24,17 @@ public class Breathing : Activity
 
     public void BreathingMessage(int duration)
     {
-        // breathe in breath out
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
 
-        while (startTime < endTime)
+        while (DateTime.Now < endTime)
         {
             Console.Write("Breathe in...");
             Countdown();
             Console.WriteLine("");
             Console.Write("Now breathe out...");
             Countdown();
+            Console.WriteLine("");
             Console.WriteLine("");
         }
 
