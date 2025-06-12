@@ -1,6 +1,6 @@
-public class Breathing
+public class Breathing : Activity
 {
-    public Breathing()
+    public Breathing(int _duration) : base()
     {
 
     }
@@ -21,6 +21,11 @@ public class Breathing
 
     public void Countdown()
     {
-        //4 3 2 1 message
+        for (int i = 5; i > 0; i--)
+        {
+            Console.Write("i");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
     }
 }

@@ -1,12 +1,12 @@
 public class Activity
 {
-    private int _duration;
-    private int _activityChoice;
+    private int _duration = 0;
+    private int _activityChoice = 0;
 
     public Activity()
     {
-        int duration = _duration;
-        int activitychoice = _activityChoice;
+        _duration = 0;
+        _activityChoice = 0;
     }
 
     //Getters and Setters
@@ -20,14 +20,14 @@ public class Activity
         return _activityChoice;
     }
 
-    public void SetDuration()
+    public void SetDuration(int duration)
     {
-        int duration = _duration;
+        _duration = duration;
     }
 
-    public void SetActivityChoice()
+    public void SetActivityChoice(int activitychoice)
     {
-        int activitychoice = _activityChoice;
+        _activityChoice = activitychoice;
     }
 
     //Methods
