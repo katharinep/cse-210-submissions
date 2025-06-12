@@ -11,6 +11,7 @@ public class Breathing : Activity
 
     public void RunBreathing(int duration)
     {
+        Console.CursorVisible = false;
         ClearScreen();
         Console.WriteLine("Get ready...");
         Spinner();
@@ -20,6 +21,7 @@ public class Breathing : Activity
         Thread.Sleep(3000);
         EndingMessage();
         ClearScreen();
+        Console.CursorVisible = true;
     }
 
     public void BreathingMessage(int duration)

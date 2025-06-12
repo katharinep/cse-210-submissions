@@ -1,11 +1,10 @@
 using System;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        //Console.CursorVisible = false;
         Console.Clear();
         Console.WriteLine("");
         Console.WriteLine("Welcome to my Mindfullness Program!");
