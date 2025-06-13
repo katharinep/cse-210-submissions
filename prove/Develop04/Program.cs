@@ -5,6 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Potential extra credit:
+        //Added else statement to menu in case an integer outside the range is entered.
+        //Added a templist that removes questions as they are asked to avoid repeating the same question.
+        //The program crashes when the templist is empty
+
         Console.Clear();
         Console.WriteLine("");
         Console.WriteLine("Welcome to my Mindfullness Program!");
@@ -58,7 +63,7 @@ class Program
         Console.Clear();
         Console.WriteLine("");
         Console.WriteLine("See you next time!");
-        Console.WriteLine(""); 
+        Console.WriteLine("");
 
     }
 
@@ -75,3 +80,5 @@ class Program
         Console.Write("Select a choice from the menu: ");
     }
 }
+//Some resources referenced during this assignment:
+//https://stackoverflow.com/questions/1952185/how-do-i-copy-items-from-list-to-list-without-foreach

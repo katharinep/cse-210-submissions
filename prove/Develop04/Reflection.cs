@@ -36,17 +36,20 @@ public class Reflection : Activity
         return _randomPrompt;
     }
 
-    public string GetRandomQ()
+    public void GetRandomQ(List<string> _tempList)
     {
         Random randomq = new Random();
-        int index = randomq.Next(_question.Count);
-        string _randomQ = _question[index];
-        return _randomQ;
+        int index = randomq.Next(_tempList.Count);
+        string _randomQ = _tempList[index];
+        Console.Write(">" + _randomQ);
+        _tempList.RemoveAt(index);
     }
 
     public void RunReflection(int duration)
     {
         _randomPrompt = GetRandomPrompt();
+        List<string> _tempList = new List<string>(_question);
+
         ClearScreen();
         Console.CursorVisible = false;
         Console.WriteLine("Get ready...");
@@ -71,14 +74,14 @@ public class Reflection : Activity
 
         while (DateTime.Now < endTime)
         {
-            string _randomQ = GetRandomQ();
-            Console.CursorVisible = true;
+            Console.CursorVisible = false;
+            GetRandomQ(_tempList);
             Console.Write(">" + _randomQ);
             Spinner();
             Spinner();
             Console.WriteLine("");
         }
-
+        Console.CursorVisible = true;
         Thread.Sleep(1000);
         EndingMessage();
         Thread.Sleep(2000);
