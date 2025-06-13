@@ -47,23 +47,26 @@ public class Reflection : Activity
     public void RunReflection(int duration)
     {
         //run activity here
+        _randomQ = "";
         _randomPrompt = GetRandomPrompt();
         ClearScreen();
+        Console.CursorVisible = false;
         Console.WriteLine("Get ready...");
         Spinner();
         ClearScreen();
-        Console.CursorVisible = false;
 
         Console.WriteLine("");
         Console.WriteLine("Consider the following prompt: ");
         Console.WriteLine("");
         Console.WriteLine($"--- {_randomPrompt} ---");
+        Console.WriteLine("");
         Console.WriteLine("When you have something in mind, press enter.");
         Console.ReadLine();
         Console.WriteLine("");
         Console.WriteLine("Ponder each of the following questions as they related to this experience.");
-        Console.WriteLine("You may begin in: ");
+        Console.Write("You may begin in: ");
         Countdown();
+        Console.WriteLine("");
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
@@ -71,12 +74,16 @@ public class Reflection : Activity
         while (DateTime.Now < endTime)
         {
             string _randomQ = GetRandomQ();
-            Console.WriteLine(">" + _randomQ);
+            Console.Write(">" + _randomQ);
             Spinner();
+            Spinner();
+            Console.WriteLine("");
         }
 
         Thread.Sleep(1000);
         Console.CursorVisible = true;
         EndingMessage();
+        Thread.Sleep(2000);
+        ClearScreen();
     }
 }
