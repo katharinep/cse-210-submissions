@@ -47,14 +47,36 @@ public class Reflection : Activity
     public void RunReflection(int duration)
     {
         //run activity here
-        string _randomPrompt = "";
-        string _randomQ = "";
+        _randomPrompt = GetRandomPrompt();
+        ClearScreen();
+        Console.WriteLine("Get ready...");
+        Spinner();
+        ClearScreen();
+        Console.CursorVisible = false;
 
-        GetRandomPrompt();
-        GetRandomQ();
-        Console.WriteLine(_randomPrompt);
-        Console.WriteLine(_randomQ);
-        Thread.Sleep(5000);
-        
+        Console.WriteLine("");
+        Console.WriteLine("Consider the following prompt: ");
+        Console.WriteLine("");
+        Console.WriteLine($"--- {_randomPrompt} ---");
+        Console.WriteLine("When you have something in mind, press enter.");
+        Console.ReadLine();
+        Console.WriteLine("");
+        Console.WriteLine("Ponder each of the following questions as they related to this experience.");
+        Console.WriteLine("You may begin in: ");
+        Countdown();
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(duration);
+
+        while (DateTime.Now < endTime)
+        {
+            string _randomQ = GetRandomQ();
+            Console.WriteLine(">" + _randomQ);
+            Spinner();
+        }
+
+        Thread.Sleep(1000);
+        Console.CursorVisible = true;
+        EndingMessage();
     }
 }
