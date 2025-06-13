@@ -1,10 +1,9 @@
-public class Listing
+public class Listing : Activity
 {
     private int _entryCount;
     private string _randomPrompt;
     //check list syntax
-    private List<string> Prompt = new List<string>()
-    {
+    private List<string> _prompt = new List<string> {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
         "Who are people that you have helped this week?",
@@ -12,7 +11,7 @@ public class Listing
         "Who are some of your personal heroes?",
     };
 
-    public Listing()
+    public Listing() : base()
     {
         
     }
@@ -22,13 +21,13 @@ public class Listing
     //Methods
     public string GetRandomPrompt()
     {
-        Random random = new Random();
-        int index = random.Next(Prompt.Count);
-        string _randomPrompt = Prompt[index];
+        Random randomp = new Random();
+        int index = randomp.Next(_prompt.Count);
+        string _randomPrompt = _prompt[index];
         return _randomPrompt;
     }
 
-    public void RunListing()
+    public void RunListing(int duration)
     {
         //run listing activity here
         _entryCount = 0;

@@ -30,10 +30,18 @@ class Program
             if (activitychoice == 2)
             {
                 //reflection
+                Reflection reflection = new Reflection();
+                reflection.ActivityDescription(activitychoice);
+                int duration = reflection.ActivityLength();
+                reflection.RunReflection(duration);
             }
             if (activitychoice == 3)
             {
                 //listing
+                Listing listing = new Listing();
+                listing.ActivityDescription(activitychoice);
+                int duration = listing.ActivityLength();
+                listing.RunListing(duration);
             }
             if (activitychoice == 4)
             {

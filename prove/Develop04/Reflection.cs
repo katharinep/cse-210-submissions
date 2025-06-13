@@ -2,15 +2,13 @@ public class Reflection : Activity
 {
     private string _randomPrompt;
     private string _randomQ;
-    private List<string> Prompt = new List<string>()
-    {
+    private List<string> _prompt = new List<string> {
        "Think of a time when you stood up for someone else.",
        "Think of a time when you did something really difficult.",
        "Think of a time when you helped someone in need.",
        "Think of a time when you did something truly selfless."
     };
-    private List<string> Question = new List<string>()
-    {
+    private List<string> _question = new List<string> {
         "Why was this experience meaningful to you?",
         "Have you ever done anything like this before?",
         "How did you get started?",
@@ -32,22 +30,31 @@ public class Reflection : Activity
     //Methods
     public string GetRandomPrompt()
     {
-        Random random = new Random();
-        int index = random.Next(Prompt.Count);
-        string _randomPrompt = Prompt[index];
+        Random randomp = new Random();
+        int index = randomp.Next(_prompt.Count);
+        string _randomPrompt = _prompt[index];
         return _randomPrompt;
     }
 
     public string GetRandomQ()
     {
-        Random random = new Random();
-        int index = random.Next(Question.Count);
-        string _randomQ = Question[index];
+        Random randomq = new Random();
+        int index = randomq.Next(_question.Count);
+        string _randomQ = _question[index];
         return _randomQ;
     }
 
-    public void RunReflection()
+    public void RunReflection(int duration)
     {
         //run activity here
+        string _randomPrompt = "";
+        string _randomQ = "";
+
+        GetRandomPrompt();
+        GetRandomQ();
+        Console.WriteLine(_randomPrompt);
+        Console.WriteLine(_randomQ);
+        Thread.Sleep(5000);
+        
     }
 }
