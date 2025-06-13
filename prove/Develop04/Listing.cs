@@ -48,6 +48,7 @@ public class Listing : Activity
 
         while (DateTime.Now < endTime)
         {
+            Console.Write(">");
             Console.ReadLine();
             _entryCount = _entryCount + 1;
         }
