@@ -18,8 +18,9 @@ public class Breathing : Activity
         Console.WriteLine("");
         Console.WriteLine("");
         BreathingMessage(duration);
-        Thread.Sleep(3000);
+        Thread.Sleep(1000);
         EndingMessage();
+        Thread.Sleep(2000);
         ClearScreen();
         Console.CursorVisible = true;
     }

@@ -1,12 +1,11 @@
 public class Activity
 {
-    private int _duration = 0;
-    private int _activityChoice = 0;
+    private int _duration;
+    private int _activityChoice;
 
     public Activity()
     {
-        _duration = 0;
-        _activityChoice = 0;
+
     }
 
     //Getters and Setters
@@ -71,8 +70,8 @@ public class Activity
     public int ActivityLength()
     {
         Console.Write("How long in seconds would you like your session to be? ");
-        int _userChoice = Console.Read();
-        int _duration = _userChoice;
+        string _userChoice = Console.ReadLine();
+        int _duration = int.Parse(_userChoice);
         return _duration;
     }
     public void ActivityTimer(int _duration)

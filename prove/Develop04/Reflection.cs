@@ -1,4 +1,4 @@
-public class Reflection
+public class Reflection : Activity
 {
     private string _randomPrompt;
     private string _randomQ;
@@ -22,7 +22,7 @@ public class Reflection
         "How can you keep this experience in mind in the future?"
     };
 
-    public Reflection()
+    public Reflection() : base()
     {
 
     }
@@ -46,7 +46,7 @@ public class Reflection
         return _randomQ;
     }
 
-    public void RunReflection(int duration)
+    public void RunReflection()
     {
         //run activity here
     }
