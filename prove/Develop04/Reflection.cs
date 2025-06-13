@@ -46,8 +46,6 @@ public class Reflection : Activity
 
     public void RunReflection(int duration)
     {
-        //run activity here
-        _randomQ = "";
         _randomPrompt = GetRandomPrompt();
         ClearScreen();
         Console.CursorVisible = false;
@@ -74,6 +72,7 @@ public class Reflection : Activity
         while (DateTime.Now < endTime)
         {
             string _randomQ = GetRandomQ();
+            Console.CursorVisible = true;
             Console.Write(">" + _randomQ);
             Spinner();
             Spinner();
@@ -81,7 +80,6 @@ public class Reflection : Activity
         }
 
         Thread.Sleep(1000);
-        Console.CursorVisible = true;
         EndingMessage();
         Thread.Sleep(2000);
         ClearScreen();

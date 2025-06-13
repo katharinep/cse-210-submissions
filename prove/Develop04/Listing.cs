@@ -31,6 +31,32 @@ public class Listing : Activity
     {
         //run listing activity here
         _entryCount = 0;
-        //finish writing this method
+        _randomPrompt = GetRandomPrompt();
+        ClearScreen();
+        Console.CursorVisible = false;
+        Console.WriteLine("Get ready...");
+        Spinner();
+        ClearScreen();
+        Console.WriteLine("List as many responses you can to the following prompt:");
+        Console.WriteLine($"--- {_randomPrompt} ---");
+        Console.Write("You may begin in: ");
+        Countdown();
+        Console.WriteLine("");
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(duration);
+
+        while (DateTime.Now < endTime)
+        {
+            Console.ReadLine();
+            _entryCount = _entryCount + 1;
+        }
+        Console.WriteLine("");
+        Console.WriteLine($"You listed {_entryCount} items.");
+        Thread.Sleep(1000);
+        Console.CursorVisible = true;
+        EndingMessage();
+        Thread.Sleep(2000);
+        ClearScreen();
     }
 }
