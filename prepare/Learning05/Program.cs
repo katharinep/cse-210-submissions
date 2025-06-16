@@ -15,5 +15,11 @@ class Program
         string reccolor = rectangle.GetColor();
         Console.WriteLine(recarea);
         Console.WriteLine(reccolor);
+
+        Shape circle = new Circle(1, "yellow");
+        double circlearea = circle.GetArea();
+        string circlecolor = circle.GetColor();
+        Console.WriteLine(circlearea);
+        Console.WriteLine(circlecolor);
     }
 }
