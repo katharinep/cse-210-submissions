@@ -9,5 +9,11 @@ class Program
         string squarecolor = square.GetColor();
         Console.WriteLine(squarearea);
         Console.WriteLine(squarecolor);
+
+        Shape rectangle = new Rectangle(4, 2, "red");
+        double recarea = rectangle.GetArea();
+        string reccolor = rectangle.GetColor();
+        Console.WriteLine(recarea);
+        Console.WriteLine(reccolor);
     }
 }
