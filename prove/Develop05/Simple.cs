@@ -4,6 +4,19 @@ public class Simple : Goal
 
     public Simple() : base()
     {
+
+    }
+
+    public override void CreateGoal()
+    {
+        GetName();
+        GetDescription();
+        GetPoints();
+        _goalComplete = false;
+    }
+
+    public override void RecordEvent()
+    {
         
     }
 }

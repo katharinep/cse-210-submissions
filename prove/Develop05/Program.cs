@@ -8,6 +8,7 @@ class Program
         Console.WriteLine("Welcome to Goal Tracker");
         int userPoints = 0;
         bool quit = false;
+        List<Goal> goals = new List<Goal>();
 
         while (quit == false)
         {
@@ -25,7 +26,10 @@ class Program
                 }
                 else if (menuChoice == 2)
                 {
-                    //List Goal
+                    foreach (Goal g in goals)
+                    {
+                        //display list
+                    }
                 }
                 else if (menuChoice == 3)
                 {

@@ -2,12 +2,13 @@ public abstract class Goal
 {
     protected string _goalName;
     protected string _goalDescription;
-    protected string _goalPoints;
-    protected bool _goalComplete;
+    protected int _goalPoints;
 
     public Goal()
     {
-        
+        string name = _goalName;
+        string description = _goalDescription;
+        int points = _goalPoints;
     }
 
     public virtual string GetName()
@@ -32,26 +33,7 @@ public abstract class Goal
         return _goalPoints;
     }
 
-    public virtual void DisplayScore()
-    {
+    public abstract void CreateGoal();
 
-    }
-
-    public virtual void DisplayGoals()
-    {
-
-    }
-
-    public virtual void CreateGoal()
-    {
-        this.GetName();
-        this.GetDescription();
-        this.GetPoints();
-        _goalComplete = false;
-    }
-
-    public virtual void RecordEvent()
-    {
-        this._goalComplete = true;
-    }
+    public abstract void RecordEvent();
 }
