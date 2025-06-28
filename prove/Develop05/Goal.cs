@@ -4,11 +4,10 @@ public abstract class Goal
     protected string _goalDescription;
     protected string _goalPoints;
     protected bool _goalComplete;
-    private List<Goal> _goals;
 
     public Goal()
     {
-        _goals = new List<Goal>();
+        
     }
 
     public virtual string GetName()
@@ -27,6 +26,7 @@ public abstract class Goal
 
     public virtual int GetPoints()
     {
+        Console.Write("How many points is the goal worth?");
         string input = Console.ReadLine();
         int _goalPoints = int.Parse(input);
         return _goalPoints;
@@ -35,7 +35,6 @@ public abstract class Goal
     public virtual void DisplayScore()
     {
 
-    }
     }
 
     public virtual void DisplayGoals()
@@ -48,11 +47,11 @@ public abstract class Goal
         this.GetName();
         this.GetDescription();
         this.GetPoints();
-           
+        _goalComplete = false;
     }
 
     public virtual void RecordEvent()
     {
-
+        this._goalComplete = true;
     }
 }
