@@ -22,7 +22,29 @@ class Program
             {
                 if (menuChoice == 1)
                 {
-                    //New Goal
+                    menu.ShowGoals();
+                    string userinput = Console.ReadLine();
+                    int goalchoice = int.Parse(userinput);
+
+                    if (goalchoice >= 1 && goalchoice <= 3)
+                    {
+                        if (goalchoice == 1)
+                        {
+                            //simple
+                        }
+                        if (goalchoice == 2)
+                        {
+                            //eternal
+                        }
+                        if (goalchoice == 3)
+                        {
+                            //checklist
+                        }
+                    }
+                    else
+                    {
+                        quit = false;
+                    }
                 }
                 else if (menuChoice == 2)
                 {
@@ -33,11 +55,13 @@ class Program
                 }
                 else if (menuChoice == 3)
                 {
-                    //Save Goal
+                    SaveLoad save = new SaveLoad();
+                    save.SaveFile();
                 }
                 else if (menuChoice == 4)
                 {
-                    //Load Goal
+                    SaveLoad load = new SaveLoad();
+                    load.LoadFile();
                 }
                 else if (menuChoice == 5)
                 {
