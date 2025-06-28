@@ -1,29 +1,41 @@
 public abstract class Goal
 {
-    private string _goalName;
-    private string _goalDescription;
-    private int _goalPoints;
-    private bool _goalComplete;
-    private List<string> _goals;
+    protected string _goalName;
+    protected string _goalDescription;
+    protected string _goalPoints;
+    protected bool _goalComplete;
+    private List<Goal> _goals;
 
     public Goal()
     {
-
+        _goals = new List<Goal>();
     }
 
-    public virtual void GetEvent()
+    public virtual string GetName()
     {
+        Console.WriteLine("What is the name of the goal?");
+        string _goalName = Console.ReadLine();
+        return _goalName;
+    }
 
+    public virtual string GetDescription()
+    {
+        Console.WriteLine("What is a description of the goal?");
+        string _goalDescription = Console.ReadLine();
+        return _goalDescription; 
     }
 
     public virtual int GetPoints()
     {
-        return 0;
+        string input = Console.ReadLine();
+        int _goalPoints = int.Parse(input);
+        return _goalPoints;
     }
 
     public virtual void DisplayScore()
     {
 
+    }
     }
 
     public virtual void DisplayGoals()
@@ -31,9 +43,12 @@ public abstract class Goal
 
     }
 
-    public virtual string CreateGoal()
+    public virtual void CreateGoal()
     {
-        return "";
+        this.GetName();
+        this.GetDescription();
+        this.GetPoints();
+           
     }
 
     public virtual void RecordEvent()
