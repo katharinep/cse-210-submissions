@@ -11,9 +11,14 @@ public class Eternal : Goal
         GetDescription();
         GetPoints();
     }
-    
-    public override void RecordEvent()
+
+    public override void RecordEvent(ref int userPoints)
     {
-        
+        userPoints += _goalPoints;
+    }
+    
+    public override void DisplayGoal()
+    {
+        Console.WriteLine("{ }" + $" {_goalName} - {_goalDescription}");
     }
 }

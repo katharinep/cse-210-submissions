@@ -22,7 +22,7 @@ public abstract class Goal
     {
         Console.WriteLine("What is a description of the goal?");
         string _goalDescription = Console.ReadLine();
-        return _goalDescription; 
+        return _goalDescription;
     }
 
     public virtual int GetPoints()
@@ -35,5 +35,7 @@ public abstract class Goal
 
     public abstract void CreateGoal();
 
-    public abstract void RecordEvent();
+    public abstract void RecordEvent(ref int userPoints);
+
+    public abstract void DisplayGoal();
 }

@@ -28,9 +28,14 @@ public class Checklist : Goal
         string userinput = Console.ReadLine();
         int _finalPoints = int.Parse(userinput);
     }
-    
-    public override void RecordEvent()
+
+    public override void RecordEvent(ref int userPoints)
     {
         //single portion of the goal completed
+    }
+    
+    public override void DisplayGoal()
+    {
+        throw new NotImplementedException();
     }
 }

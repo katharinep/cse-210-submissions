@@ -15,8 +15,21 @@ public class Simple : Goal
         _goalComplete = false;
     }
 
-    public override void RecordEvent()
+    public override void RecordEvent(ref int userPoints)
     {
-        
+        userPoints += _goalPoints;
+        _goalComplete = true;
+    }
+
+    public override void DisplayGoal()
+    {
+        if (_goalComplete == false)
+        {
+            Console.WriteLine("{ }" + $" {_goalName} - {_goalDescription}");
+        }
+        else
+        {
+            Console.WriteLine("{ }" + $" {_goalName} - {_goalDescription}");
+        }
     }
 }

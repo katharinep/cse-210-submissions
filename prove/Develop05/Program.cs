@@ -28,7 +28,7 @@ class Program
                 {
                     foreach (Goal g in goals)
                     {
-                        //display list
+                        g.DisplayGoal();
                     }
                 }
                 else if (menuChoice == 3)
