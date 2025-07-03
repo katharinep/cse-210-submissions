@@ -14,14 +14,14 @@ public abstract class Goal
     public virtual string GetName()
     {
         Console.WriteLine("What is the name of the goal?");
-        string _goalName = Console.ReadLine();
+        _goalName = Console.ReadLine();
         return _goalName;
     }
 
     public virtual string GetDescription()
     {
         Console.WriteLine("What is a description of the goal?");
-        string _goalDescription = Console.ReadLine();
+        _goalDescription = Console.ReadLine();
         return _goalDescription;
     }
 
@@ -29,7 +29,7 @@ public abstract class Goal
     {
         Console.Write("How many points is the goal worth? ");
         string input = Console.ReadLine();
-        int _goalPoints = int.Parse(input);
+        _goalPoints = int.Parse(input);
         return _goalPoints;
     }
 

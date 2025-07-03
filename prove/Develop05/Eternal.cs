@@ -19,7 +19,7 @@ public class Eternal : Goal
 
     public override void DisplayGoal()
     {
-        Console.WriteLine("{ }" + $" {_goalName} - {_goalDescription}");
+        Console.WriteLine($"[ ] {_goalName} - {_goalDescription}");
     }
 
     public override string ToCsv()

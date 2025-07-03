@@ -25,11 +25,11 @@ public class Simple : Goal
     {
         if (_goalComplete == false)
         {
-            Console.WriteLine("{ }" + $" {_goalName} - {_goalDescription}");
+            Console.WriteLine($"[ ] {_goalName} - {_goalDescription}");
         }
         else
         {
-            Console.WriteLine("{X}" + $" {_goalName} - {_goalDescription}");
+            Console.WriteLine($"[X] {_goalName} - {_goalDescription}");
         }
     }
 

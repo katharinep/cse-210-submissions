@@ -37,16 +37,19 @@ class Program
                         {
                             Simple simple = new Simple();
                             simple.CreateGoal();
+                            goals.Add(simple);
                         }
                         if (goalchoice == 2)
                         {
                             Eternal eternal = new Eternal();
                             eternal.CreateGoal();
+                            goals.Add(eternal);
                         }
                         if (goalchoice == 3)
                         {
                             Checklist checklist = new Checklist();
                             checklist.CreateGoal();
+                            goals.Add(checklist);
                         }
                     }
                     else
