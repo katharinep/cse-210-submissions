@@ -40,12 +40,14 @@ public class Simple : Goal
 
     public static Simple FromCsv(string[] parts)
     {
-        return new Simple
         {
-            _goalName = parts[1],
-            _goalDescription = parts[2],
-            _goalPoints = int.Parse(parts[3]),
-            _goalComplete = bool.Parse(parts[4])
-        };
+            Simple goal = new Simple();
+            goal._goalName = parts[1];
+            goal._goalDescription = parts[2];
+            goal._goalPoints = int.Parse(parts[3]);
+            goal._goalComplete = bool.Parse(parts[4]);
+
+            return goal;
+        }
     }
 }

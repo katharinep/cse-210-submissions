@@ -77,11 +77,15 @@ class Program
                 {
                     SaveLoad load = new SaveLoad();
                     string userFile = load.GetFile();
-                    load.LoadFile(userFile);
+                    goals = load.LoadFile(userFile);
                 }
                 else if (menuChoice == 5)
                 {
-                    //Record Event
+                    for (int i = 0; i < goals.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. ");
+                        goals[i].DisplayGoal();
+                    }
                 }
                 else
                 {

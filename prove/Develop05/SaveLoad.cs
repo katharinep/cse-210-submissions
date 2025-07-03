@@ -22,6 +22,8 @@ public class SaveLoad
                 writer.WriteLine(goal.ToCsv());
             }
         }
+        //Console.WriteLine("Saving to: " + _userFile);
+        //Console.WriteLine("Full path: " + Path.GetFullPath(_userFile));
     }
 
     public List<Goal> LoadFile(string _userFile)
@@ -48,9 +50,10 @@ public class SaveLoad
                 {
                     goals.Add(Checklist.FromCsv(parts));
                 }
+                Console.WriteLine("Loading file...");
 
             }
-
+            Console.WriteLine("File loaded.");
         }
 
         return goals;
