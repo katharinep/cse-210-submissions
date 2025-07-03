@@ -27,7 +27,7 @@ public abstract class Goal
 
     public virtual int GetPoints()
     {
-        Console.Write("How many points is the goal worth?");
+        Console.Write("How many points is the goal worth? ");
         string input = Console.ReadLine();
         int _goalPoints = int.Parse(input);
         return _goalPoints;

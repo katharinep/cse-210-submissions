@@ -7,7 +7,7 @@ class Program
     static void Main(string[] args)
     {
         Console.Clear();
-        Console.WriteLine("Welcome to Goal Tracker");
+        Console.WriteLine("Welcome to Goal Tracker\n");
         int userPoints = 0;
         int level = userPoints / 100;
         bool quit = false;
@@ -15,8 +15,8 @@ class Program
 
         while (quit == false)
         {
-            Console.WriteLine($"You have {userPoints} points");
-            Console.WriteLine($"You are level {level}");
+            Console.WriteLine($"You have {userPoints} points\n");
+            Console.WriteLine($"You are level {level}\n");
 
             Menu menu = new Menu();
             menu.ShowMenu();
@@ -35,15 +35,18 @@ class Program
                     {
                         if (goalchoice == 1)
                         {
-                            //simple
+                            Simple simple = new Simple();
+                            simple.CreateGoal();
                         }
                         if (goalchoice == 2)
                         {
-                            //eternal
+                            Eternal eternal = new Eternal();
+                            eternal.CreateGoal();
                         }
                         if (goalchoice == 3)
                         {
-                            //checklist
+                            Checklist checklist = new Checklist();
+                            checklist.CreateGoal();
                         }
                     }
                     else
@@ -53,9 +56,10 @@ class Program
                 }
                 else if (menuChoice == 2)
                 {
+                    Console.Clear();
+                    Console.WriteLine("Your goals are:");
                     foreach (Goal g in goals)
                     {
-                        Console.Clear();
                         g.DisplayGoal();
                     }
                 }
@@ -64,6 +68,7 @@ class Program
                     SaveLoad save = new SaveLoad();
                     string userFile = save.GetFile();
                     save.SaveFile(userFile, goals);
+                    Console.WriteLine($"Saving file to {userFile}");
                 }
                 else if (menuChoice == 4)
                 {

@@ -11,7 +11,7 @@ public class SaveLoad
     {
         Console.WriteLine("What is the name of your file (.csv)?");
         _userFile = Console.ReadLine();
-        return _userFile;
+        return _userFile + ".csv";
     }
     public void SaveFile(string _userFile, List<Goal> goals)
     {
@@ -38,15 +38,15 @@ public class SaveLoad
 
                 if (type == "Simple")
                 {
-                    Simple g = Simple.FromCsv(parts);
+                    goals.Add(Simple.FromCsv(parts));
                 }
                 if (type == "Eternal")
                 {
-                    Eternal g = Eternal.FromCsv(parts);
+                    goals.Add(Eternal.FromCsv(parts));
                 }
                 if (type == "Checklist")
                 {
-                    Checklist g = Checklist.FromCsv(parts);
+                    goals.Add(Checklist.FromCsv(parts));
                 }
 
             }
