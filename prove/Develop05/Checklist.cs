@@ -18,13 +18,13 @@ public class Checklist : Goal
 
         Console.WriteLine("How many times should this goal be completed?");
         string input = Console.ReadLine();
-        int _countGoal = int.Parse(input);
+        _countGoal = int.Parse(input);
 
         GetPoints();
 
         Console.WriteLine("How many bonus points for completing the goal?");
         string userinput = Console.ReadLine();
-        int _finalPoints = int.Parse(userinput);
+        _finalPoints = int.Parse(userinput);
     }
 
     public override int RecordEvent(ref int userPoints)
