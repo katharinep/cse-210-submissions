@@ -70,14 +70,14 @@ class Program
                 {
                     SaveLoad save = new SaveLoad();
                     string userFile = save.GetFile();
-                    save.SaveFile(userFile, goals);
+                    save.SaveFile(userFile, goals, ref userPoints);
                     Console.WriteLine($"Saving file to {userFile}");
                 }
                 else if (menuChoice == 4)
                 {
                     SaveLoad load = new SaveLoad();
                     string userFile = load.GetFile();
-                    goals = load.LoadFile(userFile);
+                    (goals, userPoints) = load.LoadFile(userFile);
                 }
                 else if (menuChoice == 5)
                 {
