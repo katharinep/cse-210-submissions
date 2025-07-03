@@ -1,29 +1,27 @@
 public class Checklist : Goal
 {
     private int _finalPoints;
-    private int _countGoal;
-    private int _totalTasks;
+    private int _countGoal; //total times to complete the goal for bonus points
+    private int _totalTasks; //goals completed so far
     private bool _completeChecklist;
 
     public Checklist() : base()
     {
-
-    }
-
-    public bool CompleteTask()
-    {
-        //all parts of the goal completed and bonus rewarded
-        return false;
+        _completeChecklist = false;
     }
 
     public override void CreateGoal()
     {
         GetName();
+
         GetDescription();
+
         Console.WriteLine("How many times should this goal be completed?");
         string input = Console.ReadLine();
         int _countGoal = int.Parse(input);
+
         GetPoints();
+
         Console.WriteLine("How many bonus points for completing the goal?");
         string userinput = Console.ReadLine();
         int _finalPoints = int.Parse(userinput);
@@ -31,13 +29,27 @@ public class Checklist : Goal
 
     public override int RecordEvent(ref int userPoints)
     {
-        //single portion of the goal completed
+        _totalTasks++;
+        userPoints += _goalPoints;
+
+        if (_totalTasks >= _countGoal)
+        {
+            _completeChecklist = true;
+            userPoints += _finalPoints;
+        }
         return userPoints;
     }
 
     public override void DisplayGoal()
     {
-        //write two conditionals for whether the goal is complete. Add progress to the uncompleted goal (e.g., 1/3)
+        if (_completeChecklist == true)
+        {
+            Console.WriteLine($"[X] {_goalName} - {_goalDescription} completed {_totalTasks}/{_countGoal}");
+        }
+        else
+        {
+            Console.WriteLine($"[ ] {_goalName} - {_goalDescription} completed {_totalTasks}/{_countGoal}");
+        }
     }
 
 
