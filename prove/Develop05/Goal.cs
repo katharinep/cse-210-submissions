@@ -33,6 +33,8 @@ public abstract class Goal
         return _goalPoints;
     }
 
+    public abstract string ToCsv();
+    
     public abstract void CreateGoal();
 
     public abstract void RecordEvent(ref int userPoints);

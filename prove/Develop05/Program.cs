@@ -1,18 +1,23 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         Console.WriteLine("Welcome to Goal Tracker");
         int userPoints = 0;
+        int level = userPoints / 100;
         bool quit = false;
         List<Goal> goals = new List<Goal>();
 
         while (quit == false)
         {
             Console.WriteLine($"You have {userPoints} points");
+            Console.WriteLine($"You are level {level}");
+
             Menu menu = new Menu();
             menu.ShowMenu();
             string input = Console.ReadLine();
@@ -50,18 +55,21 @@ class Program
                 {
                     foreach (Goal g in goals)
                     {
+                        Console.Clear();
                         g.DisplayGoal();
                     }
                 }
                 else if (menuChoice == 3)
                 {
                     SaveLoad save = new SaveLoad();
-                    save.SaveFile();
+                    string userFile = save.GetFile();
+                    save.SaveFile(userFile, goals);
                 }
                 else if (menuChoice == 4)
                 {
                     SaveLoad load = new SaveLoad();
-                    load.LoadFile();
+                    string userFile = load.GetFile();
+                    load.LoadFile(userFile);
                 }
                 else if (menuChoice == 5)
                 {

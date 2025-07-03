@@ -33,9 +33,38 @@ public class Checklist : Goal
     {
         //single portion of the goal completed
     }
-    
+
     public override void DisplayGoal()
     {
-        throw new NotImplementedException();
+        //write two conditionals for whether the goal is complete. Add progress to the uncompleted goal (e.g., 1/3)
+    }
+
+
+    //indexes:
+    // 0 = Checklist
+    // 1 = _goalName
+    // 2 = _goalDescription
+    // 3 = _goalPoints
+    // 4 = _totalTasks
+    // 5 = _countGoal
+    // 6 = _finalPoints
+    // 7 = _completeChecklist
+    public override string ToCsv()
+    {
+        return $"Checklist|{_goalName}|{_goalDescription}|{_goalPoints}|{_totalTasks}|{_countGoal}|{_finalPoints}|{_completeChecklist}";
+    }
+
+    public static Checklist FromCsv(string[] parts)
+    {
+        return new Checklist
+        {
+            _goalName = parts[1],
+            _goalDescription = parts[2],
+            _goalPoints = int.Parse(parts[3]),
+            _totalTasks = int.Parse(parts[4]),
+            _countGoal = int.Parse(parts[5]),
+            _finalPoints = int.Parse(parts[6]),
+            _completeChecklist = bool.Parse(parts[7]),
+        };
     }
 }

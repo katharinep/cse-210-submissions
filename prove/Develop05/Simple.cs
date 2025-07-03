@@ -29,7 +29,23 @@ public class Simple : Goal
         }
         else
         {
-            Console.WriteLine("{ }" + $" {_goalName} - {_goalDescription}");
+            Console.WriteLine("{X}" + $" {_goalName} - {_goalDescription}");
         }
+    }
+
+    public override string ToCsv()
+    {
+        return $"Simple|{_goalName}|{_goalDescription}|{_goalPoints}|{_goalComplete}";
+    }
+
+    public static Simple FromCsv(string[] parts)
+    {
+        return new Simple
+        {
+            _goalName = parts[1],
+            _goalDescription = parts[2],
+            _goalPoints = int.Parse(parts[3]),
+            _goalComplete = bool.Parse(parts[4])
+        };
     }
 }
