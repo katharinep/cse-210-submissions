@@ -15,10 +15,11 @@ public class Simple : Goal
         _goalComplete = false;
     }
 
-    public override void RecordEvent(ref int userPoints)
+    public override int RecordEvent(ref int userPoints)
     {
         userPoints += _goalPoints;
         _goalComplete = true;
+        return userPoints;
     }
 
     public override void DisplayGoal()

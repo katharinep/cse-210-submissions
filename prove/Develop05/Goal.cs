@@ -37,7 +37,11 @@ public abstract class Goal
     
     public abstract void CreateGoal();
 
-    public abstract void RecordEvent(ref int userPoints);
+    public virtual int RecordEvent(ref int userPoints)
+    {
+        userPoints += _goalPoints;
+        return userPoints;
+    }
 
     public abstract void DisplayGoal();
 }

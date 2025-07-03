@@ -12,9 +12,10 @@ public class Eternal : Goal
         GetPoints();
     }
 
-    public override void RecordEvent(ref int userPoints)
+    public override int RecordEvent(ref int userPoints)
     {
         userPoints += _goalPoints;
+        return userPoints;
     }
 
     public override void DisplayGoal()

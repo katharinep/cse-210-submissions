@@ -50,10 +50,7 @@ public class SaveLoad
                 {
                     goals.Add(Checklist.FromCsv(parts));
                 }
-                Console.WriteLine("Loading file...");
-
             }
-            Console.WriteLine("File loaded.");
         }
 
         return goals;

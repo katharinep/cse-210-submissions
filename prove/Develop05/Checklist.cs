@@ -29,9 +29,10 @@ public class Checklist : Goal
         int _finalPoints = int.Parse(userinput);
     }
 
-    public override void RecordEvent(ref int userPoints)
+    public override int RecordEvent(ref int userPoints)
     {
         //single portion of the goal completed
+        return userPoints;
     }
 
     public override void DisplayGoal()

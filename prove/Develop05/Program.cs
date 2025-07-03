@@ -83,8 +83,12 @@ class Program
                 {
                     for (int i = 0; i < goals.Count; i++)
                     {
-                        Console.WriteLine($"{i + 1}. ");
+                        Console.Write($"{i + 1}. ");
                         goals[i].DisplayGoal();
+                        Console.Write("Which goal did you complete? ");
+                        string choice = Console.ReadLine();
+                        int goalEvent = int.Parse(choice) - 1;
+                        goals[goalEvent].RecordEvent(ref userPoints);
                     }
                 }
                 else
