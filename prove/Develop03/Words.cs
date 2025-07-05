@@ -1,6 +1,5 @@
 public class Words
 {
-    private string _oneWord;
     private List<string> _wordList;
     private List<bool> _hiddenWord;
 
@@ -10,27 +9,27 @@ public class Words
         _hiddenWord = new List<bool>( new bool[_wordList.Count]);
     }
 
-    public bool Hide()
+    public void Hide()
     {
-        //code here
-        return false;
-    }
-
-    public string Show()
-    {
-        //code here
-        return "";
-    }
-
-    public string GetIsHidden()
-    {
-        //code here
-        return "";
+        Random random = new Random();
+        int index = random.Next(_hiddenWord.Count);
+        _hiddenWord[index] = true;
     }
 
     public string GetRenderedText()
     {
-        //code here
-        return "";
+        string renderedText = "";
+        for (int i = 0; i < _wordList.Count; i++)
+        {
+            if (_hiddenWord[i] == false)
+            {
+                renderedText += _wordList[i] + " ";
+            }
+            else
+            {
+                renderedText += "_____ ";
+            }
+        }
+        return renderedText;
     }
 }
