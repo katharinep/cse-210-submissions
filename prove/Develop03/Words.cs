@@ -1,11 +1,13 @@
 public class Words
 {
     private string _oneWord;
-    private bool _hiddenWord;
+    private List<string> _wordList;
+    private List<bool> _hiddenWord;
 
-    public Words()
+    public Words(string text)
     {
-
+        _wordList = new List<string>(text.Split(" "));
+        _hiddenWord = new List<bool>( new bool[_wordList.Count]);
     }
 
     public bool Hide()
