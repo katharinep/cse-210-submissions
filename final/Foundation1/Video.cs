@@ -30,4 +30,9 @@ public class Video
         _commentCount = _commentList.Count;
         return _commentCount;
     }
+
+    public List<Comment> GetComments()
+    {
+        return _commentList;
+    }
 }

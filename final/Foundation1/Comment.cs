@@ -9,4 +9,8 @@ public class Comment
         _userName = username;
     }
 
+    public string DisplayComment()
+    {
+        return $"User name: {_userName}\nComment: {_comment}";
+    }
 }
