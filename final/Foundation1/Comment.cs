@@ -1,16 +1,12 @@
 public class Comment
 {
-    private string _comment;
-    private string _userName;
-    private int _commentCount;
+    protected string _comment;
+    protected string _userName;
 
-    public Comment()
+    public Comment(string comment, string username)
     {
-
+        _comment = comment;
+        _userName = username;
     }
 
-    public int CommentCount()
-    {
-        return 0;
-    }
 }
