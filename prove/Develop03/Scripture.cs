@@ -3,25 +3,24 @@ public class Scripture
     private Reference _reference;
     private Words _words;
 
-    public Scripture()
+    public Scripture(Reference reference)
     {
-
+        _reference = reference;
     }
 
-    public string HideWords()
+    public void HideWords()
     {
-        //code here
-        return "";
+        _words.Hide();
     }
 
+    public string GetFullText()
+    {
+        Reference reference = new Reference();
+        Reference newScripture = reference.RandomScripture();
+    }
     public string GetRenderedText()
     {
-        //code here
-        return "";
-    }
 
-    public void IsCompletelyHidden()
-    {
-        
+        return "";
     }
 }
