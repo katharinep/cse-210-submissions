@@ -3,7 +3,7 @@ public class Video
     private string _title;
     private string _author;
     private int _length;
-    private List<Comment> _comment = new List<Comment>();
+    private List<Comment> _commentList = new List<Comment>();
     private int _commentCount;
 
     public Video(string title, string author, int length)
@@ -18,16 +18,15 @@ public class Video
         Console.WriteLine($"Title: {_title}");
         Console.WriteLine($"Author: {_author}");
         Console.WriteLine($"Length: {_length}");
-        //Console.WriteLine($"Number of Comments: {_commentCount}");
-        //Console.WriteLine("Comments: ");
+        Console.WriteLine($"Number of Comments: {_commentCount}");
     }
 
-    public void AddComment()
+    public void AddComment(Comment comment)
     {
-        _comment.Add(comment);
+        _commentList.Add(comment);
     }
-    public int CommentCount()
+    public void CommentCount()
     {
-        return 0;
+        _commentCount = _commentList.Count;
     }
 }
