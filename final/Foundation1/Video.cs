@@ -18,15 +18,16 @@ public class Video
         Console.WriteLine($"Title: {_title}");
         Console.WriteLine($"Author: {_author}");
         Console.WriteLine($"Length: {_length}");
-        Console.WriteLine($"Number of Comments: {_commentCount}");
+        Console.WriteLine($"Number of Comments: {_commentCount}\n");
     }
 
     public void AddComment(Comment comment)
     {
         _commentList.Add(comment);
     }
-    public void CommentCount()
+    public int CommentCount()
     {
         _commentCount = _commentList.Count;
+        return _commentCount;
     }
 }
