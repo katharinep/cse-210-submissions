@@ -5,9 +5,12 @@ public class Product
     private float _price;
     private int _quantity;
 
-    public Product()
+    public Product(string id, string name, float price, int quantity)
     {
-
+        _id = id;
+        _name = name;
+        _price = price;
+        _quantity = quantity;
     }
 
     public float ProductTotal()
