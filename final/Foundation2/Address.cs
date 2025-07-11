@@ -15,7 +15,7 @@ public class Address
 
     public string AddressString()
     {
-        return $"{_street} {_city}, {_state} {_country}";
+        return $"{_street}\n{_city}, {_state} {_country}";
     }
 
     public bool IsUsa()
