@@ -6,7 +6,7 @@ public class Customer
     public Customer(string customername, Address customeraddress)
     {
         _customerName = customername;
-        Address _customerAddress = customeraddress;
+        _customerAddress = customeraddress;
     }
 
     public string CustomerString()

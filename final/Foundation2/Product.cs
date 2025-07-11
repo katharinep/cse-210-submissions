@@ -15,6 +15,6 @@ public class Product
 
     public float ProductTotal()
     {
-        return 0;
+        return _price * _quantity;
     }
 }
