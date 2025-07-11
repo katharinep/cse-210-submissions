@@ -8,23 +8,39 @@ public class Order
 
     }
 
+    public void AddProduct(Product product)
+    {
+        _productList.Add(product);
+    }
+
+    public void AddCustomer(Customer customer)
+    {
+        _customerList.Add(customer);
+    }
+
     public float OrderTotal()
     {
-        return 0;
+        float ordertotal = 0;
+        foreach (var product in _productList)
+        {
+            float item = product.ProductTotal();
+            ordertotal += item;
+        }
+        return ordertotal;
     }
 
     public float ShippingCost()
     {
-        return 0;
+        
     }
 
     public string PackingLabel()
     {
-        return "";
+        return $"";
     }
 
     public string ShippingLabel()
     {
-        return "";
+        return $"{}";
     }
 }
