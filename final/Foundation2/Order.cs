@@ -1,21 +1,16 @@
 public class Order
 {
     private List<Product> _productList = new List<Product>();
-    private List<Customer> _customerList = new List<Customer>();
+    private Customer _customer;
 
-    public Order()
+    public Order(Customer customer)
     {
-
+        _customer = customer;
     }
 
     public void AddProduct(Product product)
     {
         _productList.Add(product);
-    }
-
-    public void AddCustomer(Customer customer)
-    {
-        _customerList.Add(customer);
     }
 
     public float OrderTotal()
@@ -26,6 +21,7 @@ public class Order
             float item = product.ProductTotal();
             ordertotal += item;
         }
+        bool country = _customer.InUsa();
         return ordertotal;
     }
 

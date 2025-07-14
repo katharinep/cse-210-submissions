@@ -16,14 +16,7 @@ public class Customer
 
     public bool InUsa()
     {
-        string country = _customerAddress.GetCountry();
-        if (country == "USA")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return _customerAddress.IsUsa();
+        
     }
 }
