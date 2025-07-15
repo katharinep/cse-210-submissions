@@ -11,7 +11,7 @@ public class Customer
 
     public string CustomerString()
     {
-        return $"{_customerName}\n{_customerAddress}";
+        return $"{_customerName}\n{_customerAddress.AddressString()}";
     }
 
     public bool InUsa()

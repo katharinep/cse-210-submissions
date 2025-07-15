@@ -21,22 +21,30 @@ public class Order
             float item = product.ProductTotal();
             ordertotal += item;
         }
-        bool country = _customer.InUsa();
+        if (_customer.InUsa())
+        {
+            ordertotal += 5;
+        }
+        else
+        {
+            ordertotal += 35;
+        }
         return ordertotal;
-    }
-
-    public float ShippingCost()
-    {
-        
     }
 
     public string PackingLabel()
     {
-        return $"";
+        string label = $"Packing label:\n";
+        foreach (var p in _productList)
+        {
+            label += $"{p.GetId()} - {p.GetName()}\n";
+        }
+        label += $"\nOrder Total: ${OrderTotal()}";
+        return label;
     }
 
     public string ShippingLabel()
     {
-        return $"{}";
+        return $"{_customer.CustomerString()}";
     }
 }

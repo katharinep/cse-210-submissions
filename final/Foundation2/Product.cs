@@ -13,6 +13,16 @@ public class Product
         _quantity = quantity;
     }
 
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public string GetId()
+    {
+        return _id;
+    }
+
     public float ProductTotal()
     {
         return _price * _quantity;
