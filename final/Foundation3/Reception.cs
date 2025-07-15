@@ -9,7 +9,7 @@ public class Reception : Event
 
     public override string DisplayStandard()
     {
-        return "";
+        return $"{_title}\n{_description}\n{_address}/n{_date} {_time}";
     }
 
     public override string DisplayFull()
@@ -19,6 +19,6 @@ public class Reception : Event
 
     public override string DisplayShort()
     {
-        return "";
+        return $"Reception: {_title} on {_date}";
     }
 }

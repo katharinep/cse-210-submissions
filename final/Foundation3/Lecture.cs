@@ -11,8 +11,7 @@ public class Lecture : Event
 
     public override string DisplayStandard()
     {
-        //code here//
-        return "";
+        return $"{_title}\n{_description}\n{_address}/n{_date} {_time}";
     }
 
     public override string DisplayFull()
@@ -23,7 +22,6 @@ public class Lecture : Event
 
     public override string DisplayShort()
     {
-        //code here//
-        return "";
+        return $"Lecture: {_title} on {_date}";
     }
 }
