@@ -14,7 +14,7 @@ public class Reception : Event
 
     public override string DisplayFull()
     {
-        return "";
+         return $"{_title}\n{_description}\n{_address}/n{_date} {_time}\n RSVP: {_email}";
     }
 
     public override string DisplayShort()

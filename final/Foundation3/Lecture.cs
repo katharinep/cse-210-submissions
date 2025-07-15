@@ -16,8 +16,7 @@ public class Lecture : Event
 
     public override string DisplayFull()
     {
-        //code here//
-        return "";
+         return $"{_title} by {_speaker}\n{_description}\n{_address}/n{_date} {_time}\nEvent Capacity: {_capacity}";
     }
 
     public override string DisplayShort()

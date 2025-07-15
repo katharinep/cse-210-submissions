@@ -14,7 +14,7 @@ public class Outdoor : Event
 
     public override string DisplayFull()
     {
-        return "";
+         return $"{_title}\n{_description}\n{_address}/n{_date} {_time}\n{_weather}";
     }
 
     public override string DisplayShort()
