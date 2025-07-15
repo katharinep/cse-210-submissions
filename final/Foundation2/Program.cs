@@ -18,6 +18,7 @@ class Program
         order1.AddProduct(product3);
 
         Console.WriteLine(order1.PackingLabel());
+        Console.WriteLine("");
         Console.WriteLine(order1.ShippingLabel());
         Console.WriteLine("");
 
@@ -31,10 +32,11 @@ class Program
 
         Order order2 = new Order(customer2);
         order2.AddProduct(product4);
-        order2.AddProduct(product2);
+        order2.AddProduct(product5);
         order2.AddProduct(product6);
 
         Console.WriteLine(order2.PackingLabel());
+        Console.WriteLine("");
         Console.WriteLine(order2.ShippingLabel());
         Console.WriteLine("");
     }

@@ -23,6 +23,11 @@ public class Product
         return _id;
     }
 
+    public string GetQuantity()
+    {
+        return _quantity.ToString();
+    }
+
     public float ProductTotal()
     {
         return _price * _quantity;

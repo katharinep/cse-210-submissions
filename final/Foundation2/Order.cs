@@ -37,14 +37,14 @@ public class Order
         string label = $"Packing label:\n";
         foreach (var p in _productList)
         {
-            label += $"{p.GetId()} - {p.GetName()}\n";
+            label += $"{p.GetId()} - {p.GetName()} Qty: {p.GetQuantity()}\n";
         }
-        label += $"\nOrder Total: ${OrderTotal()}";
+        label += $"\nOrder Total: ${OrderTotal():0.00}";
         return label;
     }
 
     public string ShippingLabel()
     {
-        return $"{_customer.CustomerString()}";
+        return $"Shipping Label:\n{_customer.CustomerString()}";
     }
 }
