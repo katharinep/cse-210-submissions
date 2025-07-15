@@ -39,5 +39,23 @@ class Program
         Console.WriteLine("");
         Console.WriteLine(order2.ShippingLabel());
         Console.WriteLine("");
+
+        //Order 3//
+        Address address3 = new Address("54 Broad Street", "Shropshire", "Essex", "United Kingdom");
+        Customer customer3 = new Customer("Henry VIII", address3);
+
+        Product product7 = new Product("777", "Rings", 23.59f, 4);
+        Product product8 = new Product("888", "Shoes", 89.50f, 1);
+        Product product9 = new Product("999", "Hat", 104.99f, 3);
+
+        Order order3 = new Order(customer3);
+        order3.AddProduct(product7);
+        order3.AddProduct(product8);
+        order3.AddProduct(product9);
+
+        Console.WriteLine(order3.PackingLabel());
+        Console.WriteLine("");
+        Console.WriteLine(order3.ShippingLabel());
+        Console.WriteLine("");
     }
 }
