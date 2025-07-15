@@ -17,12 +17,12 @@ public abstract class Event
 
     public virtual string DisplayStandard()
     {
-        return $"{_title}\n{_description}\n{_address}/n{_date} {_time}";
+        return $"{_title}\n{_description}\n{_address}\n{_date} {_time}";
     }
 
     public virtual string DisplayFull()
     {
-        return $"{_title}\n{_description}\n{_address}/n{_date} {_time}";
+        return $"{_title}\n{_description}\n{_address}\n{_date} {_time}";
     }
 
     public virtual string DisplayShort()

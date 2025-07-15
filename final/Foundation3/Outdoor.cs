@@ -9,12 +9,12 @@ public class Outdoor : Event
 
     public override string DisplayStandard()
     {
-        return $"{_title}\n{_description}\n{_address}/n{_date} {_time}";
+        return $"{_title}\n{_description}\n{_address}\n{_date} {_time}";
     }
 
     public override string DisplayFull()
     {
-         return $"{_title}\n{_description}\n{_address}/n{_date} {_time}\n{_weather}";
+         return $"{_title}\n{_description}\n{_address}\n{_date} {_time}\nWeather: {_weather}";
     }
 
     public override string DisplayShort()

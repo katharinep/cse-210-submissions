@@ -9,12 +9,12 @@ public class Reception : Event
 
     public override string DisplayStandard()
     {
-        return $"{_title}\n{_description}\n{_address}/n{_date} {_time}";
+        return $"{_title}\n{_description}\n{_address}\n{_date} {_time}";
     }
 
     public override string DisplayFull()
     {
-         return $"{_title}\n{_description}\n{_address}/n{_date} {_time}\n RSVP: {_email}";
+         return $"{_title}\n{_description}\n{_address}\n{_date} {_time}\n RSVP: {_email}";
     }
 
     public override string DisplayShort()

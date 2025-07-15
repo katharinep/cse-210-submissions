@@ -11,12 +11,12 @@ public class Lecture : Event
 
     public override string DisplayStandard()
     {
-        return $"{_title}\n{_description}\n{_address}/n{_date} {_time}";
+        return $"{_title}\n{_description}\n{_address}\n{_date} {_time}";
     }
 
     public override string DisplayFull()
     {
-         return $"{_title} by {_speaker}\n{_description}\n{_address}/n{_date} {_time}\nEvent Capacity: {_capacity}";
+         return $"{_title} by {_speaker}\n{_description}\n{_address}\n{_date} {_time}\nEvent Capacity: {_capacity}";
     }
 
     public override string DisplayShort()
