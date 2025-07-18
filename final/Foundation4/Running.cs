@@ -31,9 +31,4 @@ public class Running : Activity
         double pace = 60 / speed;
         return pace;
     }
-
-    public override void AddActivity()
-    {
-        
-    }
 }

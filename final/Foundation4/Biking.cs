@@ -28,9 +28,4 @@ public class Biking : Activity
         double pace = 60 / _speed;
         return pace;
     }
-
-    public override void AddActivity()
-    {
-        
-    }
 }

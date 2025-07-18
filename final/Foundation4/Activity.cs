@@ -2,7 +2,6 @@ public abstract class Activity
 {
     protected string _date;
     protected double _duration;
-    protected List<string> _activityList = new List<string>();
 
     public Activity(string date, double duration)
     {
@@ -28,10 +27,5 @@ public abstract class Activity
     public virtual double GetPace()
     {
         return 0;
-    }
-
-    public virtual void AddActivity()
-    {
-        
     }
 }

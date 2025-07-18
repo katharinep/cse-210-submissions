@@ -34,9 +34,4 @@ public class Swimming : Activity
         double pace = 60 / speed;
         return pace;
     }
-
-    public override void AddActivity()
-    {
-        
-    }
 }
