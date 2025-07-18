@@ -6,10 +6,12 @@ class Program
     {
         //Running Activity 1
         Running running1 = new Running(new DateTime(2025, 7, 1), 24, 5);
+        Console.WriteLine(running1.DisplaySummary());
 
         //Running Activity 2
-        Running running2 = new Running(new DateTime(2025, 7, 2),22,4);
-
+        Running running2 = new Running(new DateTime(2025, 7, 2), 22, 4);
+        Console.WriteLine(running2.DisplaySummary());
+        
         //Swimming Activity 1
 
         //Swimming Activity 2

@@ -9,7 +9,7 @@ public class Running : Activity
 
     public override string DisplaySummary()
     {
-        return $"Running - Duration: {_duration} minutes, Distance: {GetDistance():2f} km, Speed: {GetSpeed():2f}kmh, Pace: {GetPace():2f} min per km";
+        return $"{_date.ToString("dd MMM yyyy")} Running - Duration: {_duration} minutes, Distance: {GetDistance():2} km, Speed: {GetSpeed():2} kmh, Pace: {GetPace():2} min per km";
     }
 
     public override double GetDistance()
