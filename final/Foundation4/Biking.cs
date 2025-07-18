@@ -9,7 +9,7 @@ public class Biking : Activity
 
     public override string DisplaySummary()
     {
-        return "";
+        return $"Biking - Duration: {_duration} minutes, Distance: {GetDistance():2f} km, Speed: {GetSpeed():2f}kmh, Pace: {_pace:2f}";
     }
 
     public override double GetDistance()
