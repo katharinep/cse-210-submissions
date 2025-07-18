@@ -15,19 +15,24 @@ public class Swimming : Activity
     public override float GetDistance()
     {
         //Distance (km) = swimming laps * 50 / 1000
-        return 0;
+        float distance = _laps * 50 / 1000;
+        return distance;
     }
 
     public override float GetSpeed()
     {
         //Speed (mph or kph) = (distance / minutes) * 60
-        return 0;
+        float distance = GetDistance();
+        float speed = distance / _duration * 60; 
+        return speed;
     }
 
     public override float GetPace()
     {
         //Pace = 60 / speed
-        return 0;
+        float speed = GetSpeed();
+        float pace = 60 / speed;
+        return pace;
     }
 
     public override void AddActivity()
