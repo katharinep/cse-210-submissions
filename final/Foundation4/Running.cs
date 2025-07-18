@@ -2,7 +2,7 @@ public class Running : Activity
 {
     private float _distance;
 
-    public Running(string date, string duration, float distance) : base(date, duration)
+    public Running(string date, float duration, float distance) : base(date, duration)
     {
         _distance = distance;
     }
@@ -12,19 +12,22 @@ public class Running : Activity
         return "";
     }
 
-    public override string GetDistance()
+    public override float GetDistance()
     {
-        return "";
+        return _distance;
     }
 
-    public override string GetSpeed()
+    public override float GetSpeed()
     {
-        return "";
+        //Speed (mph or kph) = (distance / minutes) * 60
+        float speed = _distance / _duration * 60;
+        return speed;
     }
 
-    public override string GetPace()
+    public override float GetPace()
     {
-        return "";
+        //Pace = 60 / speed
+        return 0;
     }
 
     public override void AddActivity()
