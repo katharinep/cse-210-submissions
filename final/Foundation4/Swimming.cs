@@ -2,7 +2,7 @@ public class Swimming : Activity
 {
     private int _laps;
 
-    public Swimming(string date, float duration, int laps) : base(date, duration)
+    public Swimming(string date, double duration, int laps) : base(date, duration)
     {
         _laps = laps;
     }
@@ -12,26 +12,26 @@ public class Swimming : Activity
         return "";
     }
 
-    public override float GetDistance()
+    public override double GetDistance()
     {
         //Distance (km) = swimming laps * 50 / 1000
-        float distance = _laps * 50 / 1000;
+        double distance = _laps * 50 / 1000;
         return distance;
     }
 
-    public override float GetSpeed()
+    public override double GetSpeed()
     {
         //Speed (mph or kph) = (distance / minutes) * 60
-        float distance = GetDistance();
-        float speed = distance / _duration * 60; 
+        double distance = GetDistance();
+        double speed = distance / _duration * 60; 
         return speed;
     }
 
-    public override float GetPace()
+    public override double GetPace()
     {
         //Pace = 60 / speed
-        float speed = GetSpeed();
-        float pace = 60 / speed;
+        double speed = GetSpeed();
+        double pace = 60 / speed;
         return pace;
     }
 

@@ -1,10 +1,10 @@
 public abstract class Activity
 {
     protected string _date;
-    protected float _duration;
+    protected double _duration;
     protected List<string> _activityList = new List<string>();
 
-    public Activity(string date, float duration)
+    public Activity(string date, double duration)
     {
         _date = date;
         _duration = duration;
@@ -15,17 +15,17 @@ public abstract class Activity
         return "";
     }
 
-    public virtual float GetDistance()
+    public virtual double GetDistance()
     {
         return 0;
     }
 
-    public virtual float GetSpeed()
+    public virtual double GetSpeed()
     {
         return 0;
     }
 
-    public virtual float GetPace()
+    public virtual double GetPace()
     {
         return 0;
     }

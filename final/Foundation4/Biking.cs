@@ -1,8 +1,8 @@
 public class Biking : Activity
 {
-    private float _pace;
+    private double _pace;
 
-    public Biking(string date, float duration, float pace) : base(date, duration)
+    public Biking(string date, double duration, double pace) : base(date, duration)
     {
         _pace = pace;
     }
@@ -12,18 +12,18 @@ public class Biking : Activity
         return "";
     }
 
-    public override float GetDistance()
+    public override double GetDistance()
     {
         return 0;
     }
 
-    public override float GetSpeed()
+    public override double GetSpeed()
     {
         //Speed (mph or kph) = (distance / minutes) * 60
         return 0;
     }
 
-    public override float GetPace()
+    public override double GetPace()
     {
         return _pace;
     }
