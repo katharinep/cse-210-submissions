@@ -1,9 +1,9 @@
 public abstract class Activity
 {
-    protected string _date;
+    protected DateTime _date;
     protected double _duration;
 
-    public Activity(string date, double duration)
+    public Activity(DateTime date, double duration)
     {
         _date = date;
         _duration = duration;

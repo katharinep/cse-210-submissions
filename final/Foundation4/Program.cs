@@ -4,7 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation4 World!");
+        //Running Activity 1
+        Running running1 = new Running(new DateTime(2025, 7, 1), 24, 5);
+
+        //Running Activity 2
+        Running running2 = new Running(new DateTime(2025, 7, 2),22,4);
+
+        //Swimming Activity 1
+
+        //Swimming Activity 2
+
+        //Biking Activity 1
+
+        //Biking Activity 2
+
     }
 }
 //Math Hints:
