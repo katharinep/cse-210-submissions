@@ -27,7 +27,9 @@ public class Running : Activity
     public override float GetPace()
     {
         //Pace = 60 / speed
-        return 0;
+        float speed = GetSpeed();
+        float pace = 60 / speed;
+        return pace;
     }
 
     public override void AddActivity()
