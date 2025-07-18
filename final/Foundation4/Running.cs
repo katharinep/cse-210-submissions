@@ -6,4 +6,29 @@ public class Running : Activity
     {
         _distance = distance;
     }
+
+    public override string DisplaySummary()
+    {
+        return "";
+    }
+
+    public override string GetDistance()
+    {
+        return "";
+    }
+
+    public override string GetSpeed()
+    {
+        return "";
+    }
+
+    public override string GetPace()
+    {
+        return "";
+    }
+
+    public override void AddActivity()
+    {
+        
+    }
 }

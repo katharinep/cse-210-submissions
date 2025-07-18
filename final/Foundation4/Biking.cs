@@ -6,4 +6,29 @@ public class Biking : Activity
     {
         _pace = pace;
     }
+
+    public override string DisplaySummary()
+    {
+        return "";
+    }
+
+    public override string GetDistance()
+    {
+        return "";
+    }
+
+    public override string GetSpeed()
+    {
+        return "";
+    }
+
+    public override string GetPace()
+    {
+        return "";
+    }
+
+    public override void AddActivity()
+    {
+        
+    }
 }
