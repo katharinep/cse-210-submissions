@@ -9,7 +9,7 @@ public class Swimming : Activity
     
     public override string DisplaySummary()
     {
-        return $"Swimming - Duration: {_duration} minutes, Laps: {_laps}, Distance: {GetDistance():2f} km, Speed: {GetSpeed():2f}kmh, Pace: {GetPace():2f}";;
+        return $"Swimming - Duration: {_duration} minutes, Laps: {_laps}, Distance: {GetDistance():2f} km, Speed: {GetSpeed():2f}kmh, Pace: {GetPace():2f} min per km";;
     }
 
     public override double GetDistance()

@@ -1,15 +1,15 @@
 public class Biking : Activity
 {
-    private double _pace;
+    private double _speed;
 
-    public Biking(string date, double duration, double pace) : base(date, duration)
+    public Biking(string date, double duration, double speed) : base(date, duration)
     {
-        _pace = pace;
+        _speed = speed;
     }
 
     public override string DisplaySummary()
     {
-        return $"Biking - Duration: {_duration} minutes, Distance: {GetDistance():2f} km, Speed: {GetSpeed():2f}kmh, Pace: {_pace:2f}";
+        return $"Biking - Duration: {_duration} minutes, Distance: {GetDistance():2f} km, Speed: {GetSpeed():2f}kmh, Pace: {GetPace():2f} min per km";
     }
 
     public override double GetDistance()
@@ -19,13 +19,14 @@ public class Biking : Activity
 
     public override double GetSpeed()
     {
-        //Speed (mph or kph) = (distance / minutes) * 60
-        return 0;
+        return _speed;
     }
 
     public override double GetPace()
     {
-        return _pace;
+        //Pace = 60 / speed
+        double pace = 60 / _speed;
+        return pace;
     }
 
     public override void AddActivity()
