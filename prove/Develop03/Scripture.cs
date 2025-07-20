@@ -6,6 +6,7 @@ public class Scripture
     public Scripture(Reference reference)
     {
         _reference = reference;
+        _words = new Words(reference.FullText());
     }
 
     public void HideWords()
@@ -13,14 +14,14 @@ public class Scripture
         _words.Hide();
     }
 
-    public string GetFullText()
-    {
-        Reference reference = new Reference();
-        Reference newScripture = reference.RandomScripture();
-    }
     public string GetRenderedText()
     {
 
-        return "";
+        return $"{_reference.DisplayScripture()}\n{_words.GetRenderedText()}";
+    }
+
+    public bool AllHidden()
+    {
+        return _words.AllWordsHidden();
     }
 }

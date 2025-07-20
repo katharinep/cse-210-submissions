@@ -6,7 +6,7 @@ public class Words
     public Words(string text)
     {
         _wordList = new List<string>(text.Split(" "));
-        _hiddenWord = new List<bool>( new bool[_wordList.Count]);
+        _hiddenWord = new List<bool>(new bool[_wordList.Count]);
     }
 
     public void Hide()
@@ -31,5 +31,15 @@ public class Words
             }
         }
         return renderedText;
+    }
+
+    public bool AllWordsHidden()
+    {
+        foreach (bool hidden in _hiddenWord)
+        {
+            if (!hidden)
+                return false;
+        }
+        return true;
     }
 }

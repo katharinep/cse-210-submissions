@@ -23,6 +23,11 @@ public class Reference
         _text = text;
     }
 
+    public Reference()
+    {
+        
+    }
+
     public static Reference RandomScripture()
     {
         Random random = new Random();
